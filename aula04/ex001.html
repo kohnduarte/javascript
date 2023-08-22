@@ -16,14 +16,22 @@
         }
     </style>
 </head>
-<body>
+<body onresize="abc()">
     <h1>Olá, Mundo!</h1>
-    <p>Já me livrei da maldição!!</p>
+    <p id="onre">Já me livrei da maldição!!</p>
 
     <script>
         window.alert('Minha primeira mensagem!')
         //window.confirm('Está gostando de JS?')
         window.prompt('Qual é o seu nome?')
+
+        function abc() {
+            if(window.innerWidth < 600) {
+               onre.style.color = 'green' 
+            } else {
+               onre.style.color = 'white' 
+            }
+        }
     </script>
 </body>
 </html>
