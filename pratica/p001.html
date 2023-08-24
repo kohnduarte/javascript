@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática de JS</title>
+    <link rel="shortcut icon" href="js.ico" type="image/x-icon">
+</head>
+<body>
+    <form action="" oninput="soma.value = Number(c1.value) + Number(c2.value)">
+        <input type="number" name="" id="c1" step=".2"> <br>
+        + <br>
+        <input type="number" name="" id="c2" step=".2"> <br>
+        = <output name="soma" for="c1 c2"></output>
+    </form>
+
+    <script>
+        // o comando 'window.prompt()' sempre retorna uma string, mesmo quando o usuário insere um número
+
+        /* Conversão string -> number:
+            
+            Number.parseInt()
+            Number.parseFloat()
+            Number()
+        
+        */
+       var nome = window.prompt('Qual é o seu nome?')
+       window.alert('É um grande prazer conhecer você, ' + nome + '!')
+       var n1 = Number.parseFloat(window.prompt('Digite um número'))
+       var n2 = Number.parseFloat(window.prompt('Digite outro número'))
+       var soma = n1 + n2
+       window.alert('A soma deles é: ' + soma)
+    </script>
+</body>
+</html>
