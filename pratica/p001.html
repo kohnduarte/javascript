@@ -13,6 +13,7 @@
 
         span {
             font-weight: bold;
+            text-decoration: underline wavy;
         }
     </style>
 </head>
@@ -43,9 +44,9 @@
 
        var nome = window.prompt('Qual é o seu nome?')
        document.write(`Olá, <span>${nome}</span>!<br>`)
-       document.write(`Seu nome tem ${nome.length} letras.<br>`)
-       document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}.<br>`)
-       document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}.`)
+       document.write(`Seu nome tem <span>${nome.length}</span> letras.<br>`)
+       document.write(`Seu nome em maiúsculas é <span>${nome.toUpperCase()}</span>.<br>`)
+       document.write(`Seu nome em minúsculas é <span>${nome.toLowerCase()}</span>.`)
     </script>
 </body>
 </html>
