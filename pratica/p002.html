@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./js.ico" type="image/x-icon">
+    <style>
+        body {
+            font: 1.5em Arial;
+        }
+
+        strong {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Oi! Qual é o seu nome?')
+        var idade = window.prompt(`${nome}! Quantos anos você tem, ${nome}?`) // Template String
+        var lugar = window.prompt(idade + ' anos! E de onde você é?') // Concatenação
+        //window.alert(`${lugar}! Eu adoro esse lugar!`)
+        document.write(`<strong>${lugar.toLowerCase()}</strong>! Eu adoro esse lugar!`)
+        
+    </script>
+</body>
+</html>
