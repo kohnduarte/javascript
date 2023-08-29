@@ -15,17 +15,21 @@
     <script>
         
        var nome = window.prompt('Qual é o seu nome?')
+       window.alert(`Oi, ${nome}!`) 
        var idade = Number.parseInt(window.prompt('Quantos anos você tem?'))
        // tudo que é inserido pelo usuário dentro de 'window.prompt() é recebido como 'string', mesmo números
+       window.alert(idade >= 18 ? 'Bem-vindo(a) ao meu site!' : 'Você é muito novo(a) para acessar esse site... Por favor, considere fechar esta página.')
        var local = window.prompt('De onde você é?')
+       window.alert(local == 'RJ' || local == 'SP' || local == 'MG' || local == 'ES' ? 'A gente mora perto!' : 'A gente mora longe!' )
 
        var gênero = window.prompt('Você é homem ou mulher?')
+       window.confirm(idade >= 30 && local == 'RJ' && gênero == 'mulher' ? 'Que tal almoçarmos juntos qualquer dia?' : '')
        
-       document.write(idade < 18 ? 'Você é muito novo(a) pra acessar esse site!<br>' : 'Seja bem-vindo(a), ' + nome + '!<br>')
+       //document.write(idade < 18 ? 'Você é muito novo(a) pra acessar esse site!<br>' : 'Seja bem-vindo(a), ' + nome + '!<br>')
 
-       document.write(local == 'RJ' || local == 'SP' || local == 'MG' || local == 'ES' ? `Que legal, ${nome}! Você mora na região Sudeste, igual a mim!<br>` : `Que pena, ${nome}, você não mora na mesma região que eu...<br>`)
+       //document.write(local == 'RJ' || local == 'SP' || local == 'MG' || local == 'ES' ? `Que legal, ${nome}! Você mora na região Sudeste, igual a mim!<br>` : `Que pena, ${nome}, você não mora na mesma região que eu...<br>`)
 
-       document.write(idade >= 30 && local == 'RJ' && gênero == 'mulher' ? 'Que tal almoçarmos juntos qualquer dia?' : ' ')
+       //window.confirm(idade >= 30 && local == 'RJ' && gênero == 'mulher' ? 'Que tal almoçarmos juntos qualquer dia?' : 'Bem-vindo(a) ao meu site!')
 
     
         
