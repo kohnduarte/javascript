@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        
+       var nome = window.prompt('Qual é o seu nome?')
+       var idade = Number.parseInt(window.prompt('Quantos anos você tem?'))
+       // tudo que é inserido pelo usuário dentro de 'window.prompt() é recebido como 'string', mesmo números
+       var local = window.prompt('De onde você é?')
+
+       var gênero = window.prompt('Você é homem ou mulher?')
+       
+       document.write(idade < 18 ? 'Você é muito novo(a) pra acessar esse site!<br>' : 'Seja bem-vindo(a), ' + nome + '!<br>')
+
+       document.write(local == 'RJ' || local == 'SP' || local == 'MG' || local == 'ES' ? `Que legal, ${nome}! Você mora na região Sudeste, igual a mim!<br>` : `Que pena, ${nome}, você não mora na mesma região que eu...<br>`)
+
+       document.write(idade >= 30 && local == 'RJ' && gênero == 'mulher' ? 'Que tal almoçarmos juntos qualquer dia?' : ' ')
+
+    
+        
+        
+    </script>
+</body>
+</html>
