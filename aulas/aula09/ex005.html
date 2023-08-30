@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="refresh" content="1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(161, 161, 227);
+            color: #fff;
+            font: 1.2em Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="test2">Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p id="test">Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <h2 name="nome">Título de nível 2</h2>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        //window.document.write(p1.innerText)
+        document.write(test.innerHTML)
+        //test.style.color = 'black'
+        p1.style.color = 'black'
+
+        var heading = window.document.getElementsByTagName('h1')[0]
+
+        heading.style.color = 'green'
+
+        //window.alert(heading.innerText)
+
+        //document.write('<br><br>Hoje é dia do assunto: ' + heading.innerText)
+
+        document.write(`<br><br>Hoje é dia do assunto: ${heading.innerText}`)
+
+        var corpo = window.document.body
+
+        corpo.style.background = 'black'
+
+        //msg.style.background = 'green'
+
+        /*var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerHTML = '<strong>Olá, Mundo!</strong><br><br>' */
+
+        window.document.getElementById('msg').innerHTML = '<strong>Olá, Mundo!</strong><br><br>'
+
+        window.document.getElementsByName('nome')[0].style.color = 'green'
+        // se eu quiser fazer outra modificação, tenho que escrever tudo de novo ou posso aproveitar essa linha?
+
+        
+        
+    </script>
+    
+</body>
+</html>
