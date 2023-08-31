@@ -15,7 +15,7 @@
 </head>
 <body>
     <h1 id="test2">Iniciando estudos DOM</h1>
-    <p>Aqui vai o resultado</p>
+    <p id="test3">Aqui vai o resultado</p>
     <p id="test">Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
     <div id="msg">Clique em mim</div>
     <h2 name="nome">Título de nível 2</h2>
@@ -51,7 +51,13 @@
         window.document.getElementsByName('nome')[0].style.color = 'green'
         // se eu quiser fazer outra modificação, tenho que escrever tudo de novo ou posso aproveitar essa linha?
 
-        
+        window.document.querySelector('p#test3').style.color = 'red'
+
+        var tal = window.document.querySelector('p#test3')
+
+        tal.innerText = 'oieeeeeeeeee'
+        tal.style.background = 'blue'
+        tal.style.color = 'orange'
         
     </script>
     
