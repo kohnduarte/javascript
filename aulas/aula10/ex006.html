@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="refresh" content="20000">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            font: 1.2em Arial;
+        }
+
+        div#area {
+            margin: 10px 0 0 10px;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(93, 136, 136);
+            text-align: center;
+            color: #fff;
+        }
+
+        div#area > p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        <p>Interaja...</p>
+    </div>
+</body>
+</html>
