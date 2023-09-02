@@ -20,7 +20,6 @@
             width: 200px;
             height: 200px;
             background-color: rgb(93, 136, 136);
-            text-align: center;
             color: #fff;
         }
 
@@ -33,8 +32,15 @@
     </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area" onclick="clicar()">
         <p>Interaja...</p>
     </div>
+
+    <script>    
+        function clicar() {
+            window.document.getElementById('area').innerText = 'Clicou!'
+        }
+    
+    </script>
 </body>
 </html>
