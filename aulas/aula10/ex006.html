@@ -33,12 +33,12 @@
 </head>
 <body>
     <div id="area" onclick="clicar()">
-        <p>Interaja...</p>
+        <p id="area2">Interaja...</p>
     </div>
 
     <script>    
         function clicar() {
-            window.document.getElementById('area').innerText = 'Clicou!'
+            window.document.getElementById('area2').innerHTML = '<strong>Clicou!</strong>'
         }
     
     </script>
