@@ -19,7 +19,7 @@
             position: relative;
             width: 200px;
             height: 200px;
-            background-color: rgb(93, 136, 136);
+            background-color: green;
             color: #fff;
         }
 
@@ -32,13 +32,28 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()">
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
         <p id="area2">Interaja...</p>
     </div>
 
-    <script>    
+    <script>  
+    
+        var a = window.document.getElementById('area2')
+
+        var b = window.document.querySelector('div#area')
+
         function clicar() {
             window.document.getElementById('area2').innerHTML = '<strong>Clicou!</strong>'
+            window.document.getElementById('area').style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu'
+            b.style.background = 'green'
         }
     
     </script>
