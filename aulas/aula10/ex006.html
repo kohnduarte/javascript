@@ -32,7 +32,7 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+    <div id="area">
         <p id="area2">Interaja...</p>
     </div>
 
@@ -41,6 +41,17 @@
         var a = window.document.getElementById('area2')
 
         var b = window.document.querySelector('div#area')
+
+        /* criar eventos dentro da área de JS: '.addEventListener()' 
+        ('nomeevento', nomefunçãosemparênteses)
+
+        variável.addEventListener('click', abcde)
+
+        */
+
+        b.addEventListener('click', clicar)
+        b.addEventListener('mouseenter', entrar)
+        b.addEventListener('mouseout', sair)
 
         function clicar() {
             window.document.getElementById('area2').innerHTML = '<strong>Clicou!</strong>'
