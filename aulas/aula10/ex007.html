@@ -6,14 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="number" name="" id="c1">
-    <input type="number" name="" id="c2">
+    <input type="number" name="c1" id="c1">
+    <input type="number" name="c2" id="c2">
     <input type="button" value="Somar" id="but">
     <div id="dv"></div>
 
     <script>
-        var n1 = window.document.getElementById('c1')
-        var n2 = window.document.getElementById('c2')
+        var inp1 = window.document.getElementById('c1')
+        var inp2 = window.document.getElementById('c2')
+        var n1 = Number(inp1.value)
+        var n2 = Number(inp2.value)
         var soma = n1 + n2
         var res = window.document.querySelector('div#dv')
 
