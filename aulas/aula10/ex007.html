@@ -8,22 +8,25 @@
 <body>
     <input type="number" name="c1" id="c1">
     <input type="number" name="c2" id="c2">
-    <input type="button" value="Somar" id="but">
+    <input type="button" value="Somar" onclick="somar()">
     <div id="dv"></div>
 
     <script>
-        var inp1 = window.document.getElementById('c1')
-        var inp2 = window.document.getElementById('c2')
-        var n1 = Number(inp1.value)
-        var n2 = Number(inp2.value)
-        var soma = n1 + n2
-        var res = window.document.querySelector('div#dv')
+        function somar() {
+            var tn1 = window.document.getElementById('c1')
+            var tn2 = window.document.getElementById('c2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
 
-        but.addEventListener('click', clicar)
 
-        function clicar() {
-            res.innerHTML = `O resultado da soma entre ${n1} e ${n2} é igual a ${soma}.`
+
+
+
+            var s = n1 + n2
+            var res = window.document.getElementById('dv')
+            res.innerHTML = `A soma entre ${n1} e ${n2} é ${s}.`
         }
+        
     </script>
     
 </body>
