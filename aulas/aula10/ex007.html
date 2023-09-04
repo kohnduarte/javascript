@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="c1">
+    <input type="number" name="" id="c2">
+    <input type="button" value="Somar" id="but">
+    <div id="dv"></div>
+
+    <script>
+        var n1 = window.document.getElementById('c1')
+        var n2 = window.document.getElementById('c2')
+        var soma = n1 + n2
+        var res = window.document.querySelector('div#dv')
+
+        but.addEventListener('click', clicar)
+
+        function clicar() {
+            res.innerHTML = `O resultado da soma entre ${n1} e ${n2} é igual a ${soma}.`
+        }
+    </script>
+    
+</body>
+</html>
