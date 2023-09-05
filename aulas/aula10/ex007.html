@@ -3,30 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Somando valores</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        p {
+            /*text-decoration: underline;*/
+        }
+
+        input[type="button"] {
+            cursor: pointer;
+        }
+
+        span {
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        strong {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <input type="number" name="c1" id="c1">
-    <input type="number" name="c2" id="c2">
+    <h1>Escolha dois números e some-os</h1>
+    <input type="number" name="" id="c1" step=".1"> +
+    <input type="number" name="" id="c2" step=".1">
     <input type="button" value="Somar" onclick="somar()">
-    <div id="dv"></div>
+    <p id="result">O resultado será exibido aqui</p>
 
     <script>
-        function somar() {
-            var tn1 = window.document.getElementById('c1')
-            var tn2 = window.document.getElementById('c2')
-            var n1 = Number(tn1.value)
-            var n2 = Number(tn2.value)
+        /*function somar() {
+            var n1 = Number.parseFloat(c1.value)
+            var n2 = Number.parseFloat(c2.value)
+            var soma = n1 + n2
+            result.innerHTML = `A soma entre <em>${n1}</em> e <em>${n2}</em> é igual a <strong>${soma}</strong>`
+            
+        }*/
 
+        // esses dois métodos funcionam, mas não sei se o primeiro é correto... o professor fez o segundo em aula
 
-
-
-
-            var s = n1 + n2
-            var res = window.document.getElementById('dv')
-            res.innerHTML = `A soma entre ${n1} e ${n2} é ${s}.`
+        function somar(){
+            var contr1 = window.document.getElementById('c1')
+            var contr2 = window.document.querySelector('input#c2')
+            var n1 = Number(contr1.value)
+            var n2 = Number(contr2.value)
+            var soma = n1 + n2
+            var resultado = window.document.getElementById('result')
+            resultado.innerHTML = `A soma entre <span>${n1}</span> e <span>${n2}</span> é igual a <strong>${soma}</strong>`
         }
-        
     </script>
     
 </body>
