@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Pessoais</title>
+    <style>
+        div + div, input[type="button"] {
+            margin-top: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <form action="">
+        <div id="divnome">
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome">
+        </div>
+        <div id="dividade">
+            <label for="age">Idade:</label>
+            <input type="number" name="age" id="age">
+        </div>
+        <div id="divpais">
+            <label for="nacional">Nacionalidade:</label>
+            <input type="text" name="nacional" id="nacional">
+        </div>
+        <input id="send" type="button" value="Enviar" onclick="enviar()">
+    </form>
+
+    <script>
+        function enviar() {
+            var con1 = window.document.getElementById('inome')
+            var nome = con1.value
+            var div1 = window.document.querySelector('div#divnome')
+            div1.innerHTML = `<p>Olá, ${nome}!`
+
+
+            var con2 = window.document.getElementById('age')
+            var idade = parseInt(con2.value)
+            var div2 = window.document.querySelector('div#dividade')
+            if(idade >= 18) {
+                div2.innerHTML = `Você tem ${idade} anos, portanto, você é <strong>maior</strong> de idade.`
+            } else {
+                div2.innerHTML = `Você tem ${idade} anos, portanto, você é <strong>menor</strong> de idade.`
+            }
+
+
+            var con3 = window.document.getElementById('nacional')
+            var nacionalidade = con3.value
+            var div3 = window.document.getElementById('divpais')
+            if(nacionalidade != 'Brasileiro') {
+                div3.innerHTML = 'Você não nasceu no Brasil. Logo, você é <strong>estrangeiro</strong>.'
+            } else {
+                div3.innerHTML = 'Que legal, você nasceu aqui!'
+            }
+
+            send.style.display = 'none'
+        }
+    </script>
+    
+</body>
+</html>
