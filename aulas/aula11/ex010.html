@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <label for="ispeed">Velocidade do carro:</label>
+    <input type="number" name="speed" id="ispeed">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="result"></div>
+
+    <script>
+        /*function calcular() {
+            var vel = Number.parseInt(ispeed.value)
+            result.innerHTML = '<p>Sua velocidade atual é de <strong>' + vel + 'km/h</strong>.</p>'
+            if(vel > 60) {
+                result.innerHTML += '<p>Você está <strong>MULTADO</strong> por excesso  de velocidade</p>'
+            }
+            result.innerHTML += '<p>Dirija sempre com cinto de segurança!</p>' 
+        }*/
+
+        function calcular() {
+            var con1 = window.document.getElementById('ispeed')
+            var vel = Number.parseFloat(con1.value)
+            var rfinal = window.document.querySelector('div#result')
+            rfinal.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}km/h</strong>`
+                if(vel > 60) {
+                    rfinal.innerHTML += '<p>Você está <strong>MULTADO</strong> por excesso de velocidade'
+                }
+            rfinal.innerHTML += '<p>Dirija sempre com cinto de segurança</p>'
+        }
+    </script>
+    
+</body>
+</html>
