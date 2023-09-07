@@ -50,10 +50,10 @@
             var con3 = window.document.getElementById('nacional')
             var nacionalidade = con3.value
             var div3 = window.document.getElementById('divpais')
-            if(nacionalidade != 'Brasileiro') {
-                div3.innerHTML = 'Você não nasceu no Brasil. Logo, você é <strong>estrangeiro</strong>.'
-            } else {
+            if(nacionalidade == 'Brasileiro' || nacionalidade == 'Brasileira') {
                 div3.innerHTML = 'Que legal, você nasceu aqui!'
+            } else {
+                div3.innerHTML = 'Você não nasceu no Brasil. Logo, você é <strong>estrangeiro(a)</strong>.'
             }
 
             send.style.display = 'none'
