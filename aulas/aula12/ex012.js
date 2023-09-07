@@ -3,8 +3,9 @@
 var agora = new Date()
 var hora = agora.getHours()
 var min = agora.getMinutes()
+var seg = agora.getSeconds()
 
-console.log('Hora atual: ' + hora + ':' + min)
+console.log('Hora atual: ' + hora + ':' + min + ':' + seg)
 
 if (hora < 12) {
     console.log('Bom dia!')
