@@ -1,4 +1,4 @@
-var dia = new Date().getDay()
+var diaSem = new Date().getDay()
 
 /*          ::: condição múltipla :::
 
@@ -9,38 +9,85 @@ var dia = new Date().getDay()
         ao final de cada 'case', um comando 'break' para 'quebrar' a execução dos comandos a partir dali
 */
 
-switch (dia) {
+var diaM = new Date().getDate()
+var mes = new Date().getMonth()
+var ano = new Date().getFullYear()
+
+switch (mes) {
     case 0:
-        console.log('Hoje é Domingo')
+        var mes = 'Janeiro'
         break
     case 1:
-        console.log('Hoje é Segunda-feira')
+        var mes = 'Fevereiro'
         break
     case 2:
-        console.log('Hoje é Terça-feira')
+        var mes = 'Março'
         break
     case 3:
-        console.log('Hoje é Quarta-feira')
+        var mes = 'Abril'
         break
     case 4:
-        console.log('Hoje é Quinta-feira')
+        var mes = 'Maio'
         break
     case 5:
-        console.log('Hoje é Sexta-feira')
+        var mes = 'Junho'
         break
     case 6:
-        console.log('Hoje é Sábado')
+        var mes = 'Julho'
         break
     case 7:
-        console.log('Esse dia não existe!')
+        var mes = 'Agosto'
+        break
+    case 8:
+        var mes = 'Setembro'
+        break
+    case 9:
+        var mes = 'Outubro'
+        break 
+    case 10:
+        var mes = 'Novembro'
+        break 
+    case 11:
+        var mes = 'Dezembro'
+        break 
+    default:
+        console.log('[ERRO] mês inválido')
+}
+
+switch (diaSem) {
+    case 0:
+        var diaSem = 'Domingo'
+        break
+    case 1:
+        var diaSem = 'Segunda-feira'
+        break
+    case 2:
+        var diaSem = 'Terça-feira'
+        break
+    case 3:
+        var diaSem = 'Quarta-feira'
+        break
+    case 4:
+        var diaSem = 'Quinta-feira'
+        break
+    case 5:
+        var diaSem = 'Sexta-feira'
+        break
+    case 6:
+        var diaSem = 'Sábado'
+        break
+    case 7:
+        var diaSem = 'Esse dia não existe!'
         break
     case 'arroz':
-        console.log('Isso não é um dia da semana!')
+        var diaSem = 'Isso não é um dia da semana!'
         break
     default: // caso nenhuma opção sirva
         console.log('[ERRO] dados inválidos')
         break // opcional aqui, já que os comandos do 'switch' chegaram ao fim e não há mais nada a ser executado
 } 
+
+console.log(`Hoje é ${diaSem}, dia ${diaM} de ${mes} de ${ano}`)
 
 
 /*          ::: condições aninhadas :::
