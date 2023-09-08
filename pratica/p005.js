@@ -56,7 +56,26 @@ switch (dia) {
         }
 */
 
-var idade = 120
+var hora = new Date().getHours()
+var min = new Date().getMinutes()
+var segs = new Date().getSeconds()
+
+/*var agora = new Date()
+var hora = agora.getHours()
+var min = agora.getMinutes()
+var segs = agora.getSeconds()*/
+
+console.log('Agora são exatamente ' + hora + ':' + min + ':' + segs)
+
+if (hora < 12) {
+    console.log('Bom dia!')
+} else if (hora < 18) {
+    console.log('Boa tarde!')
+} else {
+    console.log('Boa noite!')
+}
+
+var idade = 32
 console.log(`Você tem ${idade} anos.`)
 
 if (idade < 16) {
