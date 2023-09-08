@@ -14,9 +14,13 @@
             font: 2.5em monospace;
             color: #f00;
         }
+
+        span.block {
+            text-decoration: underline;
+        }
     </style>
 </head>
-<body>
+<body id="corpo">
     <h1>Lorem, ipsum dolor.</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore recusandae impedit blanditiis officia. Atque amet soluta reprehenderit illum fugit obcaecati! Repellat nihil minus non, architecto beatae est, et quod eos labore mollitia, reprehenderit consequuntur animi. Odit earum quod aspernatur corporis non eveniet, aut reprehenderit voluptas asperiores expedita iusto minus praesentium.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos excepturi vero, amet odit ipsum expedita non minus dolores, provident rem cum quibusdam omnis unde! Saepe similique neque aperiam eligendi, laborum autem amet iste sint ipsum?</p>
@@ -32,6 +36,7 @@
 
 
     <script>
+        var bd = window.document.getElementById('corpo')
         var cor = window.prompt('Qual cor você gostaria que o site tivesse: azul, verde ou cinza?')
 
         switch (cor) {
@@ -48,7 +53,8 @@
                 break 
             default: 
                 window.document.body.style.background = 'yellow'
-                document.write('<span class="error">A cor que você escolheu não estava nas opções oferecidas!</span>')
+                bd.innerHTML = '<span class="error block">CONTEÚDO BLOQUEADO</span>'
+                document.write('<p><span class="error">A cor que você escolheu não estava nas opções oferecidas!</span></p>')
                 break // opcional aqui
         }
 
