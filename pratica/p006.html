@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática de JavaScript</title>
+    <link rel="shortcut icon" href="js.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        span.error {
+            font: 2.5em monospace;
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore recusandae impedit blanditiis officia. Atque amet soluta reprehenderit illum fugit obcaecati! Repellat nihil minus non, architecto beatae est, et quod eos labore mollitia, reprehenderit consequuntur animi. Odit earum quod aspernatur corporis non eveniet, aut reprehenderit voluptas asperiores expedita iusto minus praesentium.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos excepturi vero, amet odit ipsum expedita non minus dolores, provident rem cum quibusdam omnis unde! Saepe similique neque aperiam eligendi, laborum autem amet iste sint ipsum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eius iste assumenda autem molestiae, quis aut dolor distinctio sit non atque similique itaque corporis, facere ratione ipsa veniam aliquam, tempore saepe repudiandae harum nesciunt nostrum possimus. Mollitia obcaecati dolores optio esse ab, et animi voluptates quod cupiditate aut ipsam nesciunt eum aliquam id officia. Consectetur quae fugiat totam assumenda, aut ratione perspiciatis quisquam, neque distinctio dolor corporis maxime sed debitis odit sunt obcaecati ab ut. Velit non nisi adipisci impedit porro dolorem doloribus itaque doloremque, praesentium voluptatem distinctio delectus veritatis fuga voluptatum, suscipit nostrum? Maxime dignissimos quas in eligendi doloremque!</p>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var cor = window.prompt('Qual cor você gostaria que o site tivesse: azul, verde ou cinza?')
+
+        switch (cor) {
+            case 'azul':
+                window.document.body.style.background = 'blue'
+                window.document.body.style.color = 'white'
+                break 
+            case 'verde': 
+                window.document.body.style.background = 'green'
+                window.document.body.style.color = 'white'
+                break 
+            case 'cinza': 
+                window.document.body.style.background = 'gray'
+                break 
+            default: 
+                window.document.body.style.background = 'yellow'
+                document.write('<span class="error">A cor que você escolheu não estava nas opções oferecidas!</span>')
+                break // opcional aqui
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
