@@ -22,11 +22,16 @@
             transform: translate(-50%, -50%);           
         } 
 
+        strong {
+            text-decoration: underline;
+            color: #f00;
+        }
+
     </style>
 </head>
 <body> 
-    <div onmouseenter="entrar()">
-        <p>Sou um p</p>
+    <div id="divi" onclick="clicar()" onmousemove="mover()" onmousedown="segurar()" onmouseup="soltar()">
+        <p id="parag">Sou um p</p>
     </div>
 
     <!-- eventos de mouse para praticar: 
@@ -39,8 +44,36 @@
 
 
     <script>
-        function entrar() {
+        var P = window.document.getElementById('parag')
 
+        var D = window.document.querySelector('div#divi')
+
+        D.addEventListener('mouseenter', entrar)
+        divi.addEventListener('mouseout', sair)
+
+        function entrar() {
+            P.innerText = 'Entrou!'
+        }
+
+        function sair() {
+            P.innerText = 'Saiu!'
+        }
+
+        function clicar() {
+           // P.innerHTML = '<strong>Clicou!</strong>'
+            
+        }
+
+        function mover() {
+            D.style.background = 'silver'
+        }
+
+        function segurar() {
+            P.innerHTML = '<strong>ME SOLTA!!!</strong>'
+        }
+
+        function soltar() {
+            P.innerHTML = 'UFA!'
         }
     </script>
 
