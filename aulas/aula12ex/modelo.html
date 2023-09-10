@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercício</title>
+    <link rel="shortcut icon" href="../../pratica/js.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        footer > p {
+            font-style: italic;
+            /*background-color: khaki;*/
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Hora do Dia</h1>
+    </header>
+
+    <main>
+        <p id="ph"></p>
+    </main>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script>
+        var hora = new Date().getHours()
+        var min = new Date().getMinutes()
+        var segs = new Date().getSeconds()
+
+        var parag = window.document.getElementById('ph')
+        var tit = window.document.querySelector('h1#titulo')
+        var roda = window.document.getElementsByTagName('footer')[0]
+
+        parag.innerText = `Agora são ${hora}:${min}:${segs}.`
+
+        if (hora < 12) {
+            window.document.body.style.background = 'khaki'
+            tit.style.color = 'white'
+            roda.style.color = 'white'
+        }
+    </script>
+    
+</body>
+</html>
