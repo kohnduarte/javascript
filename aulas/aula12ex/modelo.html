@@ -68,7 +68,7 @@
         var hora = new Date().getHours()
         var min = new Date().getMinutes()
         var segs = new Date().getSeconds()
-var hora = 19
+var hora = 5
         var parag = window.document.getElementById('ph')
         var tit = window.document.querySelector('h1#titulo')
         var roda = window.document.getElementsByTagName('footer')[0]
@@ -76,10 +76,10 @@ var hora = 19
 
         parag.innerText = `Agora são ${hora}:${min}:${segs}.`
 
-        if (hora >= 6 && hora < 12) {
+        if (hora < 6) {
+            M.innerHTML += '<img src="night.png" alt="noite">'
+        } else if (hora < 12) {
             window.document.body.style.background = 'khaki'
-            /*tit.style.color = 'white'
-            roda.style.color = 'white'*/
             M.innerHTML += '<img src="manha.png" alt="manhã de sol">'
         } else if (hora < 16) {
             window.document.body.style.background = 'deepskyblue'
