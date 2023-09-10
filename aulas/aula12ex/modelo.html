@@ -15,6 +15,7 @@
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
             color: #fff;
+            background: url('noite.jpg') fixed center/cover;
         }
 
         header > h1 {
@@ -22,7 +23,7 @@
         }
 
         main {
-            background-color: #fff;
+            background-color: #ffffff82;
             color: #000;
             width: 500px;
             height: 300px;
@@ -46,7 +47,7 @@
 
         footer > p {
             font-style: italic;
-            /*background-color: deepskyblue;*/
+            /*background-color: ;*/
         }
     </style>
 </head>
@@ -67,7 +68,7 @@
         var hora = new Date().getHours()
         var min = new Date().getMinutes()
         var segs = new Date().getSeconds()
-
+var hora = 19
         var parag = window.document.getElementById('ph')
         var tit = window.document.querySelector('h1#titulo')
         var roda = window.document.getElementsByTagName('footer')[0]
@@ -75,17 +76,19 @@
 
         parag.innerText = `Agora são ${hora}:${min}:${segs}.`
 
-        if (hora < 12) {
+        if (hora >= 6 && hora < 12) {
             window.document.body.style.background = 'khaki'
             /*tit.style.color = 'white'
             roda.style.color = 'white'*/
             M.innerHTML += '<img src="manha.png" alt="manhã de sol">'
         } else if (hora < 16) {
             window.document.body.style.background = 'deepskyblue'
-            M.innerHTML += '<img src="tarde.png" alt="tarde de sol" id="tarde">'
-        } else if (hora < 18) {
+            M.innerHTML += '<img src="tarde.png" alt="tarde de sol">'
+        } else if (hora <= 18) {
             window.document.body.style.background = 'darkorange'
             M.innerHTML += '<img src="sunset.png" alt="pôr do sol">'
+        } else {
+            M.innerHTML += '<img src="night.png" alt="noite">'
         }
     </script>
     
