@@ -99,8 +99,20 @@ var gen = 'Homem'
                 R. innerHTML += '<img src="h-20-40.png">'
             } else if (gen == 'Homem' && age <= 64) {
                 R.innerHTML += '<img src="h-41-64.png">'
-            } else {
+            } else if (gen == 'Homem') {
                 R.innerHTML += '<img src="h-65-xxx.png">'
+            }
+
+            if (gen == 'Mulher' && age < 10) {
+                R.innerHTML += '<img src="m-00-09.png">'
+            } else if (gen == 'Mulher' && age < 20) {
+                R.innerHTML += '<img src="m-10-19.png">'
+            } else if (gen == 'Mulher' && age <= 40) {
+                R.innerHTML += '<img src="m-20-40.png">'
+            } else if (gen == 'Mulher' && age < 65) {
+                R.innerHTML += '<img src="m-41-64.png">'
+            } else if (gen == 'Mulher') {
+                R.innerHTML += '<img src="m-65-xxx.png">'
             }
         }
     </script>
