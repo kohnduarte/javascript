@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="shortcut icon" href="../../../pratica/js.ico" type="image/x-icon">
+    <style>
+        
+
+        body {
+            background-color: dodgerblue;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        main {
+            background-color: #fff;
+            color: #000;
+            max-width: 400px;
+            margin: auto;
+            text-align: left;
+            padding: 25px 0 14px 13px;
+            border-radius: 7px;
+            box-shadow: 1px 1px 5px 0px #000000b5;
+        }
+
+        input#birth {
+            width: 68px;
+        }
+
+        div + div {
+            margin: 1em 0;
+        }
+
+        div#resultado {
+            margin-top: 1em;
+        }
+
+        div#resultado > p {
+            text-align: center;
+        }
+
+        div#resultado > img {
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin: auto;
+        }
+
+        footer > p > small {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de Idade</h1>
+    <main>
+        <!--<form action="destino-dos-dados.php">-->
+            <div>
+                <label for="birth">Ano de nascimento:</label>
+                <input type="number" name="birth" id="birth" min="1900" placeholder=" ex: 1991">
+            </div>
+
+            <div>
+                Gênero:
+                <input type="radio" name="genero" id="masc" value="Homem"> <label for="masc">Masculino</label>
+                <input type="radio" name="genero" id="fem" value="Mulher"> <label for="fem">Feminino</label>
+            </div>
+
+            <input type="button" value="Verificar" onclick="verifIdade()">
+        <!--</form>-->
+            <div id="resultado">Preencha os dados acima para ver o resultado!</div>
+    </main>
+    <footer>
+        <p><small>&copy; CursoemVideo</small></p>
+    </footer>
+
+    <script>
+        function verifIdade() {
+            var R = window.document.getElementById('resultado')
+            var cont1 = window.document.querySelector('input#birth')
+            var nasceu = parseInt(cont1.value) 
+            var anoatual = new Date().getFullYear()
+            var age = anoatual - nasceu
+
+var gen = 'Homem'
+            var rad1 = window.document.getElementById('masc')
+            
+
+            R.innerHTML = `<p>Detectamos ${gen} com ${age} anos.</p>`
+
+            if (gen == 'Homem' && age < 10) {
+                R.innerHTML += '<img src="h-00-09.png">'
+            } else if (gen == 'Homem' && age < 20) {
+                R.innerHTML += '<img src="h-10-19.png">'
+            } else if (gen == 'Homem' && age <= 40) {
+                R. innerHTML += '<img src="h-20-40.png">'
+            } else if (gen == 'Homem' && age <= 64) {
+                R.innerHTML += '<img src="h-41-64.png">'
+            } else {
+                R.innerHTML += '<img src="h-65-xxx.png">'
+            }
+        }
+    </script>
+    
+</body>
+</html>
