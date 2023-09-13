@@ -84,10 +84,13 @@
             var nasceu = parseInt(cont1.value) 
             var anoatual = new Date().getFullYear()
             var age = anoatual - nasceu
+            var rad = window.document.getElementsByName('genero')
 
-var gen = 'Homem'
-            var rad1 = window.document.getElementById('masc')
-            
+            if (rad[0].checked) {
+                var gen = 'Homem'
+            } else {
+                var gen = 'Mulher'
+            }            
 
             R.innerHTML = `<p>Detectamos ${gen} com ${age} anos.</p>`
 
