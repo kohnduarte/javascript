@@ -52,6 +52,10 @@
         footer > p > small {
             font-style: italic;
         }
+
+        h1#erro {
+            color: #f00;
+        }
     </style>
 </head>
 <body>
@@ -85,6 +89,12 @@
             var anoatual = new Date().getFullYear()
             var age = anoatual - nasceu
             var rad = window.document.getElementsByName('genero')
+
+            if (nasceu > anoatual) {
+                window.alert('[ERRO] ano inválido')
+                window.document.body.innerHTML = '<h1 id="erro">O ano ' + nasceu + ' ainda nem chegou! Por favor, recarregue a página e preencha os campos novamente.</h1>'
+                window.document.body.style.backgroundColor = 'yellow'
+            }
 
             if (rad[0].checked) {
                 var gen = 'Homem'
