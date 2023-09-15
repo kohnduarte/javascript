@@ -8,8 +8,8 @@ var i = window.document.getElementsByTagName('img')[0]
 
 P.innerText = `Agora são exatamente ${hora}h, ${min}min e ${segs}s.`
 
-if (hora >= 0 && hora < 6) {
-    B.style.background = 'url(img/night.jpg)'
+if (hora < 6) {
+    B.style.background = 'url(img/night.jpg) fixed center/cover'
     i.src = 'img/noite.png'
 } else if (hora < 12) {
     i.src = 'img/manha.png'
@@ -22,5 +22,5 @@ if (hora >= 0 && hora < 6) {
     B.style.backgroundColor = 'darkorange'
 } else {
     i.src = 'img/noite.png'
-    B.style.background = 'url(img/night.jpg)'
+    B.style.background = 'url(img/night.jpg) fixed center/cover'
 }
