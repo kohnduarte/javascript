@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #fff;
+}
+
+section {
+    width: 500px;
+    height: 350px;
+    margin: auto;
+    color: #000;
+    background-color: #fff;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+section > p#parh {
+    margin: 0 0 .5em 0;
+}
+
+small {
+    font-style: italic;
+}
