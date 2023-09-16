@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#js {
+            width: 300px;
+        }
+
+        p {
+            color: #fff;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var B = window.document.body
+        var D = window.document.createElement('div')
+        B.appendChild(D)
+        // curiosidade: 'append' significa prender, anexar
+        D.setAttribute('id', 'js')
+        D.setAttribute('title', 'Tudo isso foi criado usando JavaScript!')
+        var P = window.document.createElement('p')
+        D.appendChild(P)
+        P.innerHTML = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. <strong>Aperiam</strong> ea minima doloremque debitis vel temporibus quisquam ullam, tempore eum rerum necessitatibus officiis modi, corporis amet, ducimus ipsam nostrum odit autem!'
+        D.style.margin = 'auto'
+        D.style.backgroundColor = 'darkorange'
+        var I = window.document.createElement('img')
+        I.setAttribute('src', '../aulas/aula12ex/ex015/m-20-40.png')
+        D.appendChild(I)
+
+
+
+
+
+
+    </script>
+</body>
+</html>
