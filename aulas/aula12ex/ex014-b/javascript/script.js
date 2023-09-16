@@ -13,7 +13,7 @@ if (hora < 6) {
     i.src = 'img/noite.png'
 } else if (hora < 12) {
     i.src = 'img/manha.png'
-    B.style.backgroundColor = '#eff156'
+    B.style.backgroundColor = '#e4ec98'
 } else if (hora < 16) {
     i.src = 'img/tarde.png'
     B.style.backgroundColor = '#4283dd'
