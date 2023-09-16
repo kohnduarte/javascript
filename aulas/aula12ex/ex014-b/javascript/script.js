@@ -8,7 +8,7 @@ var i = window.document.getElementsByTagName('img')[0]
 var S = window.document.getElementsByClassName('secao')[0]
 var T = window.document.getElementsByName('titulo')[0]
 var P2 = window.document.querySelector('p[title]')
-var hora = 3
+
 P.innerText = `Agora são exatamente ${hora}h, ${min}min e ${segs}s.`
 
 if (hora < 6) {
