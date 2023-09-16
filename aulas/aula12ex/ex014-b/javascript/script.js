@@ -5,7 +5,10 @@ var segs = new Date().getSeconds()
 var B = window.document.body
 var P = window.document.getElementById('parh')
 var i = window.document.getElementsByTagName('img')[0]
-
+var S = window.document.getElementsByClassName('secao')[0]
+var T = window.document.getElementsByName('titulo')[0]
+var P2 = window.document.querySelector('p[title]')
+var hora = 3
 P.innerText = `Agora são exatamente ${hora}h, ${min}min e ${segs}s.`
 
 if (hora < 6) {
@@ -23,4 +26,10 @@ if (hora < 6) {
 } else {
     i.src = 'img/noite.png'
     B.style.background = 'url(img/night.jpg) fixed center/cover'
+}
+
+function carregar() {
+    S.style.boxShadow = '1px 1px 5px #0006'
+    T.style.textShadow = '1px 1px 3px #000'
+    P2.style.textShadow = '1px 1px 3px #000'
 }
