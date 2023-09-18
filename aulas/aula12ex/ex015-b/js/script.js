@@ -8,9 +8,9 @@ function Verificar() {
         // gênero e imagem
 
     var radio = window.document.getElementsByName('genero')
-    var D = window.document.getElementsByClassName('resultado')[0]
+    
     var P = window.document.querySelector('p#divres')
-    var I = window.document.createElement('img')
+    
 
     if (radio[0].checked) {
         var gen = 'Homem'
@@ -22,8 +22,11 @@ function Verificar() {
     }
 
     P.innerText = `Detectamos ${gen} com ${idade} anos.`
-    P.style.textAlign = 'center'
+    D.style.textAlign = 'center'
+    P.style.marginBottom = '1em'
     
 }
 
+var D = window.document.getElementsByClassName('resultado')[0]
+var I = window.document.createElement('img')
 D.appendChild(I)
