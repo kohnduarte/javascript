@@ -44,7 +44,6 @@ function Verificar() {
         window.alert('[ERRO] Ano inválido!')
         D.innerHTML = '<p>Por favor, insira um ano válido e tente novamente.</p>'
     }
-
     
     D.style.textAlign = 'center'    
     I.setAttribute('alt', 'imagem que corresponde ao gênero e à idade da pessoa')
