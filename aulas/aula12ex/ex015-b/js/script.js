@@ -18,9 +18,26 @@ function Verificar() {
             I.src = 'img/h-00-09.png'
         } else if (idade < 20) {
             I.setAttribute('src', 'img/h-10-19.png')
+        } else if (idade < 40) {
+            I.src = 'img/h-20-40.png'
+        } else if (idade < 65) {
+            I.setAttribute('src', 'img/h-41-64.png')
+        } else {
+            I.src = 'img/h-65-xxx.png'
         }
     } else {
         var gen = 'Mulher'
+        if (idade < 10) {
+            I.setAttribute('src', 'img/m-00-09.png')
+        } else if (idade < 20) {
+            I.src = 'img/m-10-19.png'
+        } else if (idade < 40) {
+            I.setAttribute('src', 'img/m-20-40.png')
+        } else if (idade < 65) {
+            I.src = 'img/m-41-64.png'
+        } else {
+            I.setAttribute('src', 'img/m-65-xxx.png')
+        }
     }
 
     P.innerText = `Detectamos ${gen} com ${idade} anos.`
