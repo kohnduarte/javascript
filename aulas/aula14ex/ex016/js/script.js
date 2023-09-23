@@ -24,9 +24,9 @@ function contar() {
     
 
     R.setAttribute('type', 'button')
-    R.setAttribute('value', 'Apagar')
+    R.setAttribute('value', 'Recomeçar')
     R.setAttribute('onclick', 'apaga()')
-    D.appendChild(R)
+    //D.appendChild(R)
 
 
 
