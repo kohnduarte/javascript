@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    padding: 0;
 }
 
 body {
@@ -29,8 +30,18 @@ section > div {
     box-shadow: 2px 2px 8px 0px #00000063;
 }
 
-div + div {
+ul {
+    margin-top: 0;
+    list-style-type: none;
+}
+
+li + li {
     margin: 1em 0;
+}
+
+input[type="number"] {
+    height: 1.6em;
+    border: 1px solid #000;
 }
 
 input#c1 {
@@ -50,3 +61,4 @@ input[type="button"] {
 p#pdng {
     margin-bottom: 0;
 }
+
