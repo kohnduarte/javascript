@@ -5,7 +5,7 @@ function contar() {
 
     var start = Number.parseInt(cinicio.value)
     var end = parseInt(cfim.value)
-    var step = Number.parseInt(cpasso.value)
+    var passo = Number.parseInt(cpasso.value)
 
     var D = window.document.getElementsByTagName('div')[0]
     var P = window.document.getElementsByClassName('change')[0]
