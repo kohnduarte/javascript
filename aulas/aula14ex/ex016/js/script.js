@@ -10,30 +10,12 @@ function contar() {
     var D = window.document.getElementsByTagName('div')[0]
     var P = window.document.getElementsByClassName('change')[0]
 
-    P.style.display = 'none'
-
-    var P2 = window.document.createElement('p')
-    D.appendChild(P2)
+    P.innerText = ''
 
     for (n = start; n <= end; n++) {
-        P2.innerText += ' ' + n + ' 👉'
+        P.innerText += ' ' + n + ' 👉'
     }
 
-    P2.innerText += ' 🏳️FIM🏴'
+    P.innerText += ' 🏳️FIM🏴'
 
-    
-
-    R.setAttribute('type', 'button')
-    R.setAttribute('value', 'Recomeçar')
-    R.setAttribute('onclick', 'apaga()')
-    //D.appendChild(R)
-
-
-
-}
-
-var R = window.document.createElement('input')
-
-function apaga() {
-    P2.style.display = 'none'
 }
