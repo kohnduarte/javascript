@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contador</title>
+    <link rel="shortcut icon" href="../../../pratica/js.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <header>
+            <h1>Vamos contar</h1>
+        </header>
+
+        <div>
+            <div>
+                <label for="c1">Início:</label>
+                <input type="number" name="" id="c1" step=".1" min="-1000" max="1000">
+            </div>
+            <div>
+                <label for="c2">Fim:</label>
+                <input type="number" name="" id="c2" step=".1" min="-1000" max="1000">
+            </div>
+            <div>
+                <label for="c3">Passo:</label>
+                <input type="number" name="" id="c3" step=".1" min="-1000" max="1000">
+            </div>
+
+            <input type="button" value="Contar" onclick="contar()">
+
+            <p id="pdng">Preparando a contagem...</p>
+        </div>
+
+        <footer><p><small>&copy; CursoemVideo</small></p></footer>
+    </section>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
