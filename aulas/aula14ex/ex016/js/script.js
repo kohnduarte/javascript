@@ -14,6 +14,8 @@ function contar() {
         P.innerText = null
         for (n = start; n <= end; n++) {
             P.innerText += ' ' + n + ' 👉'
+            n += passo
+            n--
         }
         P.innerText += ' 🏳️FIM🏴'
     } else {
