@@ -10,12 +10,22 @@ function contar() {
     var D = window.document.getElementsByTagName('div')[0]
     var P = window.document.getElementsByClassName('change')[0]
 
-    P.innerText = ''
+    
 
-    for (n = start; n <= end; n++) {
-        P.innerText += ' ' + n + ' 👉'
+    if (start >= -100 && start <= 100) {
+        if (end <= 100) {
+            if (passo >= 1 && passo <= 10) {
+                document.write('boa!')
+            }
+        }
+    } else {
+        window.alert('[ERRO] Por favor, preencha os campos novamente')
+        P.innerText = 'Preparando a contagem...'
     }
 
-    P.innerText += ' 🏳️FIM🏴'
+    
 
 }
+
+P.innerText = ''
+P.innerText += ' 🏳️FIM🏴'
