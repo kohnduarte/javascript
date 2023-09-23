@@ -12,12 +12,12 @@ function contar() {
 
     
 
-    if (start >= -100 && start <= 100) {
-        if (end <= 100) {
-            if (passo >= 1 && passo <= 10) {
-                document.write('boa!')
-            }
+    if (start >= -100 && start <= 100 && end <= 100 && passo >= 1 && passo <= 10) {
+        P.innerText = null
+        for (n = start; n <= end; n++) {
+            P.innerText += ' ' + n + ' 👉'
         }
+        P.innerText += ' 🏳️FIM🏴'
     } else {
         window.alert('[ERRO] Por favor, preencha os campos novamente')
         P.innerText = 'Preparando a contagem...'
@@ -27,5 +27,4 @@ function contar() {
 
 }
 
-P.innerText = ''
-P.innerText += ' 🏳️FIM🏴'
+
