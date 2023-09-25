@@ -63,3 +63,7 @@ p#pdng {
     margin-bottom: 0;
 }
 
+small {
+    font-style: italic;
+}
+
