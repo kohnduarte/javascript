@@ -10,7 +10,12 @@ function contar() {
     var D = window.document.getElementsByTagName('div')[0]
     var P = window.document.getElementsByClassName('change')[0]    
 
-    if (start >= -100 && start <= 100 && end <= 100 && passo >= 1 && passo <= 10 && start != end) {
+    if (start >= -100 && start <= 100 && end >= -100 && end <= 100 && passo >= 0 && passo <= 10 && start != end) {
+
+        if (passo == 0) {
+            window.alert('[ERRO] Impossível contar de ' + passo + ' em ' + passo + '! Considerarei passo = 1')
+            passo = 1
+        }
         
         P.innerText = null
         
