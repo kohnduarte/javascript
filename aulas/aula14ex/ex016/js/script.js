@@ -10,13 +10,20 @@ function contar() {
     var D = window.document.getElementsByTagName('div')[0]
     var P = window.document.getElementsByClassName('change')[0]    
 
-    if (start >= -100 && start <= 100 && end <= 100 && passo >= 1 && passo <= 10) {
+    if (start >= -100 && start <= 100 && end <= 100 && passo >= 1 && passo <= 10 && start != end) {
         P.innerText = null
         for (n = start; n <= end; n++) {
             P.innerText += ' ' + n + ' 👉'
             n += passo
             n--
         }
+
+        for (n = start; n >= end; n++) {
+            P.innerText += ' ' + n + ' 👉'
+            n -= passo
+            n--
+        }
+
         P.innerText += ' 🏳️FIM🏴'
     } else {
         window.alert('[ERRO] Por favor, preencha os campos novamente')
