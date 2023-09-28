@@ -22,7 +22,7 @@ if (cini.value.length > 0 && cfim.value.length > 0 && cpasso.value.length > 0) {
     }
 } else {
     window.alert('[ERRO] Faltam dados!')
-    
+    P.innerText = 'Por favor, preencha todos os campos.'
 }
 
 
