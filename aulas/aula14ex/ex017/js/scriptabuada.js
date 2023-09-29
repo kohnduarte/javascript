@@ -8,6 +8,8 @@ function tabuada() {
             S.innerHTML = ''
             for (t = 1; t <= 10; t++) {
                 var opt = window.document.createElement('option')
+                //opt.value = `${n} x ${t} = ${n*t}`
+                opt.setAttribute('value', `${n} x ${t} = ${n*t}`)
                 S.appendChild(opt)
                 opt.innerText = `${n} x ${t} = ${n*t}`
             }            
