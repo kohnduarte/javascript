@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: dodgerblue;
+    color: #fff;
+}
+
+section > header > h1 {
+    font-size: 2em;
+}
+
+section > header > h1, section > footer {
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+}
+
+section > div {
+    font-size: 1.1em;
+    background-color: #fff;
+    color: #000;
+    padding: 25px 12px 14px;
+    max-width: 502px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px 0px #00000063;
+}
+
+input[type="number"] {
+    height: 1.9em;
+    width: 35px;
+    border: 1px solid #000;
+    margin-right: 1em;
+}
+
+input[type="button"] {
+    letter-spacing: .05em;
+    padding: 0.3em 1em;
+    cursor: pointer;
+}
+
+small {
+    font-style: italic;
+}
+
+/*span.erro {
+    text-decoration: underline wavy;
+}*/
+
