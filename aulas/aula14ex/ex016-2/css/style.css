@@ -67,3 +67,7 @@ small {
     font-style: italic;
 }
 
+span.erro {
+    text-decoration: underline wavy;
+}
+
