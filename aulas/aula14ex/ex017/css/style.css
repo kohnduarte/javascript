@@ -43,6 +43,12 @@ input[type="button"] {
     cursor: pointer;
 }
 
+select {
+    display: block;
+    margin-top: 1.5em;
+    height: 200px;
+}
+
 small {
     font-style: italic;
 }
