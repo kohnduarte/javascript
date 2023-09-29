@@ -46,7 +46,6 @@ input[type="button"] {
 select {
     display: block;
     margin-top: 1.5em;
-    height: 200px;
 }
 
 small {
