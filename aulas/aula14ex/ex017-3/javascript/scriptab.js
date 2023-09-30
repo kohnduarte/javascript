@@ -13,6 +13,8 @@ function GerarTab() {
             do {
                 var opt = window.document.createElement('option')
                 opt.innerText = n + ' x ' + t + ' = ' + n*t
+                //opt.value = n + ' x ' + t
+                opt.setAttribute('value', `${n} x ${t}`)
                 S.appendChild(opt)
                 t++
             } while (t <= 10)
