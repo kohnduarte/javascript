@@ -13,12 +13,12 @@
             <h1>Tabuada</h1>
         </header>
 
-        <div class="tbda">            
+        <div>            
            <label for="c1">Número:</label>
-           <input type="number" name="" id="c1" min="0" max="10">
-           <input type="button" value="Gerar Tabuada" onclick="tabuada()">
+           <input type="number" name="" id="c1">
+           <input type="button" value="TABUADA!">
 
-           <select name="" id="sel" size="10">
+           <select name="sel" id="" size="10">
             <option value="">Digite um número acima</option>
            </select>
         </div>
@@ -28,7 +28,30 @@
         </footer>
     </section>
 
-    <script src="js/scriptabuada.js"></script>
+    <script>
+        var Botao = window.document.querySelector('input[type="button"]')
+        Botao.addEventListener('click', GerarTab)
+
+        function GerarTab() {
+            var controle = window.document.getElementById('c1')
+            var S = window.document.getElementsByName('sel')[0]
+            if (controle.value.length == 0) {
+                window.alert('[ERRO] Faltam dados!')
+                S.innerHTML = '<option>É necessário inserir um número para gerar a tabuada!</option>'
+            } else {
+                var n = parseInt(controle.value)              
+                S.innerHTML = ''
+                var t = 1
+                // estrutura de repetição com teste lógico no início
+                while (t <= 10) {
+                    var opt = window.document.createElement('option')
+                    opt.innerText = `${n} x ${t} = ${n*t}`
+                    S.appendChild(opt)
+                    t++
+                }
+            }
+        }
+    </script>
     
 </body>
 </html>
