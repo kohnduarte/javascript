@@ -21,6 +21,10 @@ console.log(nums)
 console.log(`Agora o vetor possui ${nums.length} elementos.`)
 console.log(`Os valores dos elementos são: ${nums}`)
 
+for (chave = 0; chave < nums.length; chave++) {
+    console.log(`O elemento de índice ${chave} possui valor ${nums[chave]}`)
+}
+
 
 
 
