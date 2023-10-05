@@ -1,4 +1,5 @@
 num = [4, 5, 6, 7, 8]
+num.sort(function(a, b) {return b - a})
 /*
 console.log(num[0])
 console.log(num[1])
@@ -22,7 +23,7 @@ for (let chave = 0; chave < num.length; chave++) {
 
 console.log(num)
 // digite um número para saber a sua chave
-let x = 8
+let x = 3
 let chave = num.indexOf(x)
 
 if (chave >= 0) {
