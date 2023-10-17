@@ -18,11 +18,11 @@ var produto = Mult()
 
 console.log(produto)
 
-function MyFunction(nome) {
+function MyFunction(nome='John') {
     return 'Hello ' + nome
 }
 
-var saudação = MyFunction('John')
+var saudação = MyFunction('Erick')
 
 console.log(saudação)
 
