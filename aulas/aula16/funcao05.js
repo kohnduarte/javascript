@@ -8,3 +8,8 @@ function fatorial(n) {
 }
 
 console.log(fatorial(5))
+
+/*
+como ele soube calcular o fatorial de um número
+sem eu explicar?
+*/
