@@ -12,10 +12,14 @@ let a = []
 
 function Add() {    
     let num = parseInt(controle.value)
-    a.push(num)
-    let O = window.document.createElement('option')
-    O.innerText = `Valor ${num} adicionado.`
-    S.appendChild(O)
+    if (controle.value.length > 0 && num >= 1 && num <= 100) {
+        a.push(num)
+        let O = window.document.createElement('option')
+        O.innerText = `Valor ${num} adicionado.`
+        S.appendChild(O)
+    } else {
+        window.alert('Valor inválido ou já encontrado na lista.')
+    }
 }
 
 function Finish() {
