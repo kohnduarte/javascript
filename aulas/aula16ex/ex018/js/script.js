@@ -12,7 +12,7 @@ let a = []
 
 function Add() {    
     let num = parseInt(controle.value)
-    if (controle.value.length > 0 && num >= 1 && num <= 100) {
+    if (controle.value.length > 0 && num >= 1 && num <= 100 && a.indexOf(num) == -1) {
         D.innerText = ''
         a.push(num)
         let O = window.document.createElement('option')
