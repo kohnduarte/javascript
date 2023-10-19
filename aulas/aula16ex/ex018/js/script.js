@@ -18,8 +18,12 @@ function Add() {
         let O = window.document.createElement('option')
         O.innerText = `Valor ${num} adicionado.`
         S.appendChild(O)
+        controle.value = ''
+        controle.focus()
     } else {
         window.alert('Valor inválido ou já encontrado na lista.')
+        controle.value = ''
+        controle.focus()
     }
 }
 
@@ -42,5 +46,6 @@ function Finish() {
         D.appendChild(p5)
     } else {
         window.alert('Por favor, adicione pelo menos 3 números.')
+        controle.focus()
     }
 }
