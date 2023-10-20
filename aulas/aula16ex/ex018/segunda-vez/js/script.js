@@ -64,15 +64,22 @@ function Fim() {
         controle.focus()
     } else {
         D.innerHTML = '<p>Ao todo, temos ' + valores.length + ' números cadastrados.</p>'
-        valores.sort(function(a, b) {return b-a})
-        D.innerHTML += '<p>O maior valor informado foi ' + valores[0] + '.</p>'
-        D.innerHTML += '<p>O menor valor informado foi ' + valores[valores.length - 1] + '.</p>'
         let soma = 0
+        let maior = 0
+        let menor = 101
 
         for (let ind in valores) {
             soma += valores[ind]
+            if (maior < valores[ind] ) {
+                maior = valores[ind]
+            }
+            if (menor > valores[ind]) {
+                menor = valores[ind]
+            }
         }
-
+        
+        D.innerHTML += '<p>O maior valor informado foi ' + maior + '.</p>'
+        D.innerHTML += '<p>O menor valor informado foi ' + menor + '.</p>'        
         D.innerHTML += '<p>Somando todos os valores, temos ' + soma + '.</p>'
         let média = soma / valores.length
         D.innerHTML += '<p>A média dos valores digitados é ' + média + '.</p>'
