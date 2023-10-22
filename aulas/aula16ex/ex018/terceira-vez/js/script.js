@@ -39,6 +39,7 @@ function add() {
     if (! vazio(controle.value.length, 0)) {
         if (numVal(controle.value, 1, 100)) {
             if (! naLista(vetor, controle.value, -1)) {
+                D.innerHTML = ''
                 vetor.push(controle.value)
                 let item = window.document.createElement('option')
                 item.innerText = `Valor ${controle.value} adicionado.`
@@ -82,6 +83,7 @@ function end() {
         let maior = 0
         let menor = 99
         let soma = 0
+
         for (let i in vetor) {
             if (maior < parseInt(vetor[i])) {
                 maior = vetor[i]
@@ -91,9 +93,13 @@ function end() {
             }
             soma = soma + parseInt(vetor[i])
         }
+
+        let média = soma / vetor.length
+
         D.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
         D.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
-        D.innerHTML += `<p>Somando todos os valores, temos ${soma}.`   
+        D.innerHTML += `<p>Somando todos os valores, temos ${soma}.`
+        D.innerHTML += `<p>A média dos valores digitados é ${média}.` 
     } else {
         window.alert('É necessário haver pelo menos 2 números para prosseguir.')
         controle.focus()
