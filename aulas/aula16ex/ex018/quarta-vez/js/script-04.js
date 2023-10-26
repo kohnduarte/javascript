@@ -20,13 +20,19 @@ function numvalido(n, min, max) {
     }
 }
 
-function presente()
+function presente(n, ind) {
+    if (numbers.indexOf(n) >= ind) {
+        return true
+    } else {
+        return false
+    }
+}
 
 function Adic() {
     if (!vazio(controle.value.length, 0)) {
         if (numvalido(parseInt(controle.value), 1, 100)) {
-            if (!presente()) {
-                window.alert('ok')
+            if (!presente(parseInt(controle.value), 0)) {
+                numbers.push(parseInt(controle.value))
             } else {
                 window.alert('Este número já se encontra na lista. Por favor, escolha outro.')
             }
