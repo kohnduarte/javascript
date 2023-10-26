@@ -47,3 +47,22 @@ numbers[5] = 70
 console.log(numbers)
 
 numbers.forEach(function(item) {console.log(item)})
+
+let n = [12, 45, 1, 0, 32, 65, -4, 877, 20]
+let maior = -100
+let menor = 1000
+let soma2 = 0
+
+function GeP(element) {
+    if (maior < element) {
+        maior = element
+    }
+    if (menor > element) {
+        menor = element
+    }
+    soma2 += element
+} // essa função está sendo chamada no método 'forEach()', o que significa que ela será executada uma vez com cada elemento do array.
+
+n.forEach(GeP)
+
+console.log(`O menor número do meu array é ${menor}. Já o maior é ${maior}. A soma de todos os números é ${soma2}.`)
