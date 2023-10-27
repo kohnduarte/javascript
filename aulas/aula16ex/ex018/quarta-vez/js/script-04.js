@@ -75,5 +75,23 @@ function Final() {
     } else {
         sect.appendChild(Dfinal)
         Dfinal.innerHTML = `<p>Ao todo, temos ${numbers.length} números cadastrados.</p>`
+        let maior = 0
+        let menor = 99
+        let soma = 0
+        function GpS(item) {
+            if (maior < item) {
+                maior = item
+            }
+            if (menor > item) {
+                menor = item
+            }
+            soma += item
+        }
+        numbers.forEach(GpS)
+        Dfinal.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
+        Dfinal.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
+        Dfinal.innerHTML += `<p>Somando todos os valores, temos ${soma}.</p>`
+        let média = soma / numbers.length
+        Dfinal.innerHTML += `<p>A média dos valores digitados é ${média}.</p>`
     }
 }
