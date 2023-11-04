@@ -14,6 +14,6 @@ a[7] = undefined
 
 console.log(a)
 
-a = a.filter((x) => x != undefined && x != null)
+a = a.filter((x) => x !== undefined && x != null)
 
 console.log(a)
