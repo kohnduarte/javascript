@@ -32,7 +32,7 @@
             var teste = a.some((item) => item == controle.value)
             if (teste == false){                
                 a.push(controle.value)
-                P.innerHTML = a.join('-')
+                P.innerHTML = a.join(' ')
                 window.document.body.appendChild(P)
                 controle.value = ''
                 controle.focus()
