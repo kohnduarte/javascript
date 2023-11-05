@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../pratica/js.ico" type="image/x-icon">
+</head>
+<body>
+   <input type="number" name="" id="c1">
+   <input type="button" value="">
+
+
+   <script>
+    var a = []
+    var P = window.document.createElement('p')
+    var controle = window.document.getElementById('c1')
+    controle.focus()
+    var botao = window.document.querySelector('input[type="button"]')
+    botao.addEventListener('click', myFunction)
+
+    var f = function vazio(comprim, nada) {
+        if (comprim == nada) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    function naLista(a, n) {
+        if (a.indexOf(n) >= 0) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    function myFunction() {
+        if (!f(controle.value.length, 0)) {
+            if (!naLista(a, controle.value)){                
+                a.push(controle.value)
+                P.innerHTML = a.join('-')
+                window.document.body.appendChild(P)
+                controle.value = ''
+                controle.focus()
+            } else {
+                window.alert('[ERRO]')
+                controle.value = ''
+                controle.focus()
+            }
+        } else {
+            window.alert('[ERRO]')
+            controle.focus()
+        }
+    }
+
+
+
+
+
+
+
+   </script>
+</body>
+</html>
