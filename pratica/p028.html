@@ -25,19 +25,12 @@
         } else {
             return false
         }
-    }
-
-    function naLista(a, n) {
-        if (a.indexOf(n) >= 0) {
-            return true
-        } else {
-            return false
-        }
-    }
+    }    
 
     function myFunction() {
         if (!f(controle.value.length, 0)) {
-            if (!naLista(a, controle.value)){                
+            var teste = a.some((item) => item == controle.value)
+            if (teste == false){                
                 a.push(controle.value)
                 P.innerHTML = a.join('-')
                 window.document.body.appendChild(P)
