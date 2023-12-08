@@ -29,6 +29,7 @@
         var botao = window.document.querySelector('input[value="Clica"]')
         botao.addEventListener('click', clique)
         var controle = window.document.getElementsByTagName('input')[0]
+        controle.focus()
         var botao2 = window.document.getElementsByClassName('fim')[0]
         botao2.addEventListener('click', encerrar)
         var B = window.document.body
@@ -56,7 +57,7 @@
                     var verificação = array.some((x) => x == controle.value)
                     if (verificação == false) {
                         info.innerHTML = ''
-                        array.push(controle.value)
+                        array.push(parseInt(controle.value))
                         var item = window.document.createElement('option')
                         item.innerText = `Valor ${controle.value} adicionado.`
                         S.appendChild(item)
@@ -87,6 +88,7 @@
         function encerrar() {
             if (!tooSmall(array.length, 3)) {
                 info.innerHTML = `<p>O vetor atual possui ${array.length} elementos.</p>`
+                info.innerHTML += `<p>A soma de seus valores é ${array.reduce((x, y) => x + y)}.</p>`
                 B.appendChild(info)
                 controle.focus()
                 } else {
