@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>título</title>
+    <style>
+        input + input {
+            margin-left: 1em;
+        }
+
+        select {
+            width: 150px;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="number" name="" id="c1">
+        <input type="button" value="Clica">
+    </div>
+    <select name="" id="cdesel" size="10"></select>
+    <div><input type="button" value="Encerrar" class="fim"></div>
+
+    <script>
+        var array = []
+        var S = window.document.getElementById('cdesel')
+        var botao = window.document.querySelector('input[value="Clica"]')
+        botao.addEventListener('click', clique)
+        var controle = window.document.getElementsByTagName('input')[0]
+        var botao2 = window.document.getElementsByClassName('fim')[0]
+        botao2.addEventListener('click', encerrar)
+        var B = window.document.body
+        var info = window.document.createElement('div')
+
+        function vazio(comp, nada) {
+            if (comp == nada) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function numVal(n, min, max) {
+            if (n >= min && n <= max) {
+                return true
+            } else {
+                return false
+            }
+        }
+        
+        function clique() {
+            if (!vazio(controle.value.length, 0)) {
+                if (numVal(controle.value, 1, 10)) {
+                    var verificação = array.some((x) => x == controle.value)
+                    if (verificação == false) {
+                        info.innerHTML = ''
+                        array.push(controle.value)
+                        var item = window.document.createElement('option')
+                        item.innerText = `Valor ${controle.value} adicionado.`
+                        S.appendChild(item)
+                        controle.value = ''
+                        controle.focus()
+                    } else {
+                        alert('já tem')
+                        controle.value = ''
+                        controle.focus()
+                    }
+                } else {
+                    window.alert('erro')
+                }
+            } else {
+                window.alert('erro')
+                controle.focus()
+            }
+        }
+
+        function tooSmall(comp, min) {
+            if (comp < min) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function encerrar() {
+            if (!tooSmall(array.length, 3)) {
+                info.innerHTML = `<p>O vetor atual possui ${array.length} elementos.</p>`
+                B.appendChild(info)
+                controle.focus()
+                } else {
+                window.alert('erro')
+                controle.focus()
+            }
+        }
+    </script>
+</body>
+</html>
