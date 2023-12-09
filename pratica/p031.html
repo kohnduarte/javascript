@@ -70,6 +70,8 @@
                     }
                 } else {
                     window.alert('erro')
+                    controle.value = ''
+                    controle.focus()
                 }
             } else {
                 window.alert('erro')
@@ -89,6 +91,9 @@
             if (!tooSmall(array.length, 3)) {
                 info.innerHTML = `<p>O vetor atual possui ${array.length} elementos.</p>`
                 info.innerHTML += `<p>A soma de seus valores é ${array.reduce((x, y) => x + y)}.</p>`
+                info.innerHTML += `<p>O maior valor é ${array.reduce((x, y) => x > y ? x : y)}.</p>`
+                info.innerHTML += `<p>O menor valor é ${array.reduce((x, y) => x < y ? x : y)}.</p>`
+                info.innerHTML += `A média é ${array.reduce((x, y) => x + y) / array.length}.</p>`
                 B.appendChild(info)
                 controle.focus()
                 } else {
