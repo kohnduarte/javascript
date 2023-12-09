@@ -16,9 +16,12 @@ function tabuada() {
         } else {
             window.alert('[ERRO] O número deve ser entre 0 e 10.')
             S.innerHTML = '<option>Digite um número acima entre 0 e 10</option>'
+            caixa.value = ''
+            caixa.focus()
         }
     } else {
         window.alert('[ERRO] Por favor, é preciso que você insira um número.')
         S.innerHTML = '<option>Digite um número acima</option>'
+        caixa.focus()
     }
 }
