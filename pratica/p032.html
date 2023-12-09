@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="c1">Número:</label> <input type="number" name="" id="c1" min="0" max="10" autofocus>
+        <input type="button" value="Gerar Tabuada">
+    </div>
+
+    <select name="" id="">
+        <option value="" class="remover">Digite um número acima</option>
+    </select>
+
+
+    <script>
+        var c = window.document.getElementById('c1')
+        var botao = window.document.querySelector('input[type="button"]')
+        var result = window.document.getElementsByTagName('select')[0]
+        var retirar = window.document.getElementsByClassName('remover')[0]
+
+        botao.addEventListener('click', gerarTab)
+
+        function vazio(comp, nada) {
+            if (comp == nada) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        // predicados: funções que retornam um valor booleano
+
+        function numVal(n, min, max) {
+            if (n >= min && n <= max) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function gerarTab() {
+            if (!vazio(c.value.length, 0)) {
+                if (numVal(c.value, 1, 10)) {
+                    retirar.style.display = 'none'
+                    result.size = '10'
+                } else {
+                    window.alert('O número deve ser entre 1 e 10')
+                    c.value = ''
+                    c.focus()
+                    result.setAttribute('size', '1')
+                }
+            } else {
+                window.alert('Por favor, digite um número')
+                c.focus()
+                result.size = '1'
+            }
+        }
+    </script>
+    
+</body>
+</html>
