@@ -30,8 +30,24 @@
             }
         }
 
+        function num1Val(num, min, max) {
+            if (num >= min && num <= max) {
+                return true
+            } else {
+                return false
+            }
+        }
+
         function vazio2(len, nulo) {
             if (len == nulo) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function num2Val(num2, min, max) {
+            if (num2 >= min && num2 <= max) {
                 return true
             } else {
                 return false
@@ -46,8 +62,37 @@
             }
         }
 
+        function num3Val(num3, min, max) {
+            if (num3 >= min && num3 <= max) {
+                return true
+            } else {
+                return false
+            }
+        }
+
         function Contar() {
             if (!vazio1(com.value.length, 0)) {
+                if (num1Val(com.value, -100, 100)) {
+                    if (!vazio2(fim.value.length, 0)) {
+                        if (num2Val(fim.value, -100, 100)) {
+                            if (!vazio3(pas.value.length, 0)) {
+                                if (num3Val(pas.value, 1, 10)) {
+                                    window.alert('ok')
+                                } else {
+                                    window.alert('O passo mínimo é 1, o máximo é 10')
+                                }
+                            } else {
+                                window.alert('Escolha de quanto em quanto a contagem deverá ser feita')
+                            }                            
+                        } else {
+                            window.alert('O número escolhido deve estar entre -100 e 100')
+                        }
+                    } else {
+                        window.alert('Defina onde a contagem deve terminar')
+                    }
+                } else {
+                    window.alert('O número escolhido deve estar entre -100 e 100')
+                }
                 if (!vazio2(fim.value.length, 0)) {
                     if (!vazio3(pas.value.length, 0)) {
                         window.alert('ok')
