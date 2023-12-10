@@ -51,12 +51,10 @@
                 if (numVal(c.value, 1, 10)) {
                     result.innerHTML = ''
                     result.size = '10'
-                    var cont = 1
-                    while (cont <= 10) {
-                        var line = window.document.createElement('option')
-                        line.innerHTML = `${c.value} x ${cont} = ${c.value * cont}`
-                        result.appendChild(line)
-                        cont++
+                    for (var cont = 1; cont <= 10; cont++) {
+                        var linha = window.document.createElement('option')
+                        linha.innerText = c.value + ' x ' + cont + ' = ' + c.value * cont
+                        result.appendChild(linha)
                     }
                     c.value = ''
                     c.focus()
