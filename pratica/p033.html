@@ -80,30 +80,27 @@
                                     window.alert('ok')
                                 } else {
                                     window.alert('O passo mínimo é 1, o máximo é 10')
+                                    pas.value = ''
+                                    pas.focus()
                                 }
                             } else {
                                 window.alert('Escolha de quanto em quanto a contagem deverá ser feita')
+                                pas.focus()
                             }                            
                         } else {
                             window.alert('O número escolhido deve estar entre -100 e 100')
+                            fim.value = ''
+                            fim.focus()
                         }
                     } else {
                         window.alert('Defina onde a contagem deve terminar')
+                        fim.focus()
                     }
                 } else {
                     window.alert('O número escolhido deve estar entre -100 e 100')
-                }
-                if (!vazio2(fim.value.length, 0)) {
-                    if (!vazio3(pas.value.length, 0)) {
-                        window.alert('ok')
-                    } else {
-                        window.alert('Escolha de quanto em quanto a contagem deverá ser feita')
-                        pas.focus()
-                    }
-                } else {
-                    window.alert('Defina onde a contagem deve terminar')
-                    fim.focus()
-                }
+                    com.value = ''
+                    com.focus()
+                }                
             } else {
                 window.alert('Defina um início para a contagem')
                 com.focus()
