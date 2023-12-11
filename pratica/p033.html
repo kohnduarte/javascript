@@ -97,28 +97,34 @@
                                     window.alert('O passo mínimo é 1, o máximo é 10')
                                     pas.value = ''
                                     pas.focus()
+                                    P.innerHTML = 'Preparando a contagem...'
                                 }
                             } else {
                                 window.alert('Escolha de quanto em quanto a contagem deverá ser feita')
                                 pas.focus()
+                                P.innerHTML = 'Preparando a contagem...'
                             }                            
                         } else {
                             window.alert('O número escolhido deve estar entre -100 e 100')
                             fim.value = ''
                             fim.focus()
+                            P.innerHTML = 'Preparando a contagem...'
                         }
                     } else {
                         window.alert('Defina onde a contagem deve terminar')
                         fim.focus()
+                        P.innerHTML = 'Preparando a contagem...'
                     }
                 } else {
                     window.alert('O número escolhido deve estar entre -100 e 100')
                     com.value = ''
                     com.focus()
+                    P.innerHTML = 'Preparando a contagem...'
                 }                
             } else {
                 window.alert('Defina um início para a contagem')
                 com.focus()
+                P.innerHTML = 'Preparando a contagem...'
             }
             
         }
