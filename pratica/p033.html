@@ -73,11 +73,18 @@
         function Contar() {
             if (!vazio1(com.value.length, 0)) {
                 if (num1Val(com.value, -100, 100)) {
+                    var ini = Number.parseInt(com.value)
                     if (!vazio2(fim.value.length, 0)) {
                         if (num2Val(fim.value, -100, 100)) {
+                            var final = parseInt(fim.value)
                             if (!vazio3(pas.value.length, 0)) {
                                 if (num3Val(pas.value, 1, 10)) {
-                                    window.alert('ok')
+                                    var passo = Number.parseInt(pas.value)
+                                    P.innerHTML = ''
+                                    while (ini <= final) {
+                                        P.innerHTML += ini 
+                                        ini += passo
+                                    }
                                 } else {
                                     window.alert('O passo mínimo é 1, o máximo é 10')
                                     pas.value = ''
