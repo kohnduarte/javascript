@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="c1">Início:</label> <input type="number" name="" id="c1" min="-100" max="100"> <br> <br> <!-- atenção! criar espaços com o elemento <br> é a forma errada, o certo seria utilizar CSS -->
+    <label for="c2">Fim:</label> <input type="number" name="" id="c2" min="-100" max="100"> <br> <br>
+    <label for="c3">Passo:</label> <input type="number" name="" id="c3" min="1" max="10"> <br> <br>
+    <input type="button" value="Contar">
+    <p class="result">Preparando a contagem...</p>
+
+    <script>
+        var com = window.document.getElementById('c1')
+        com.focus()
+        var fim = window.document.querySelector('input#c2')
+        var pas = window.document.getElementsByTagName('input')[2]
+        var botao = window.document.querySelector('input[type="button"]')
+        var P = window.document.getElementsByClassName('result')[0]
+
+        botao.addEventListener('click', Contar)
+
+        function vazio1(len, nulo) {
+            if (len == nulo) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function num1Val(num, min, max) {
+            if (num >= min && num <= max) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function vazio2(len, nulo) {
+            if (len == nulo) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function num2Val(num2, min, max) {
+            if (num2 >= min && num2 <= max) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function vazio3(len, nulo) {
+            if (len == nulo) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function num3Val(num3, min, max) {
+            if (num3 >= min && num3 <= max) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function Contar() {
+            if (!vazio1(com.value.length, 0)) {
+                if (num1Val(com.value, -100, 100)) {
+                    var ini = Number.parseInt(com.value)
+                    if (!vazio2(fim.value.length, 0)) {
+                        if (num2Val(fim.value, -100, 100)) {
+                            var final = parseInt(fim.value)
+                            if (!vazio3(pas.value.length, 0)) {
+                                if (num3Val(pas.value, 1, 10)) {
+                                    var passo = Number.parseInt(pas.value)
+                                    P.innerHTML = ''
+                                    if (ini != final) {
+                                        if (ini < final) {
+                                        while (ini <= final) {
+                                            P.innerHTML += ini + ' \u{1F449} '
+                                            ini += passo
+                                        }
+                                    } else {
+                                        while (ini >= final) {
+                                            P.innerHTML += ini + ' \u{1F449} '
+                                            ini -= passo
+                                        }
+                                    }
+                                    P.innerHTML += '\u{1F3F3} FIM \u{1F3F3}'
+                                    } else {
+                                        window.alert('O início e o fim não podem ser iguais')
+                                        P.innerHTML = 'Preparando a contagem...'
+                                    }                                   
+                                } else {
+                                    window.alert('O passo mínimo é 1, o máximo é 10')
+                                    pas.value = ''
+                                    pas.focus()
+                                    P.innerHTML = 'Preparando a contagem...'
+                                }
+                            } else {
+                                window.alert('Escolha de quanto em quanto a contagem deverá ser feita')
+                                pas.focus()
+                                P.innerHTML = 'Preparando a contagem...'
+                            }                            
+                        } else {
+                            window.alert('O número escolhido deve estar entre -100 e 100')
+                            fim.value = ''
+                            fim.focus()
+                            P.innerHTML = 'Preparando a contagem...'
+                        }
+                    } else {
+                        window.alert('Defina onde a contagem deve terminar')
+                        fim.focus()
+                        P.innerHTML = 'Preparando a contagem...'
+                    }
+                } else {
+                    window.alert('O número escolhido deve estar entre -100 e 100')
+                    com.value = ''
+                    com.focus()
+                    P.innerHTML = 'Preparando a contagem...'
+                }                
+            } else {
+                window.alert('Defina um início para a contagem')
+                com.focus()
+                P.innerHTML = 'Preparando a contagem...'
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>
