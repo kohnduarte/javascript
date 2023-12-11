@@ -81,7 +81,8 @@
                                 if (num3Val(pas.value, 1, 10)) {
                                     var passo = Number.parseInt(pas.value)
                                     P.innerHTML = ''
-                                    if (ini < final) {
+                                    if (ini != final) {
+                                        if (ini < final) {
                                         while (ini <= final) {
                                             P.innerHTML += ini + ' \u{1F449} '
                                             ini += passo
@@ -93,6 +94,10 @@
                                         }
                                     }
                                     P.innerHTML += '\u{1F3F3} FIM \u{1F3F3}'
+                                    } else {
+                                        window.alert('O início e o fim não podem ser iguais')
+                                        P.innerHTML = 'Preparando a contagem...'
+                                    }                                   
                                 } else {
                                     window.alert('O passo mínimo é 1, o máximo é 10')
                                     pas.value = ''
