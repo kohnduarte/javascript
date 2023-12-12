@@ -66,10 +66,11 @@
                     var idade = anoatual - c1.value
                     if (sexoOk()) {                        
                         D.style.backgroundColor = '#fff'
+                        corpo.appendChild(img)
                         if (Homem()) {
                             P.innerHTML = `Detectamos Homem com ${idade} anos.`
                             if (idade < 10) {                                
-                                corpo.appendChild(img)
+                                
                                 img.src = 'h-00-09.png'
                             } else if (idade < 20) {
 
