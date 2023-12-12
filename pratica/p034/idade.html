@@ -23,6 +23,8 @@
         var anoatual = new Date().getFullYear()
         var D = window.document.getElementsByTagName('div')[0]
         var P = window.document.getElementsByClassName('result')[0]
+        var img = window.document.createElement('img')
+        var corpo = window.document.body
 
         botao.addEventListener('click', Verificar)
 
@@ -67,6 +69,10 @@
                         if (Homem()) {
                             if (idade < 10) {
                                 P.innerHTML = `Detectamos Homem com ${idade} anos.`
+                                corpo.appendChild(img)
+                                img.src = 'h-00-09.png'
+                            } else if (idade < 20) {
+                                
                             }
                         } else {
                             window.alert('Mulher')
