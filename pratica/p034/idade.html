@@ -72,6 +72,9 @@
                     var idade = anoatual - c1.value
                     if (sexoOk()) {                        
                         D.style.backgroundColor = '#fff'
+                        if (img.style.display == 'none') {
+                            img.style.display = 'inline'
+                        }
                         corpo.appendChild(img)
                         if (Homem()) {
                             P.innerHTML = `Detectamos Homem com ${idade} anos.`
@@ -109,11 +112,13 @@
                     c1.value =''
                     c1.focus()
                     P.innerHTML = 'Preencha os dados acima para ver o resultado!'
+                    img.style.display = 'none'
                 }
             } else {
                 window.alert('Em que ano você nasceu?')
                 c1.focus()
                 P.innerHTML = 'Preencha os dados acima para ver o resultado!'
+                img.style.display = 'none'
             }
 
         }
