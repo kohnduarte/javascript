@@ -49,11 +49,24 @@
             }
         }
 
+        function Homem() {
+            if (radio[0].checked) {
+                return true
+            } else {
+                return false
+            }
+        }
+
         function Verificar() {
             if (!vazio(c1.value.length, 0)) {
                 if (numVal(c1.value, 1900, anoatual)) {
                     if (sexoOk()) {                        
                         D.style.backgroundColor = '#fff'
+                        if (Homem()) {
+                            window.alert('ok')
+                        } else {
+                            window.alert('Mulher')
+                        }
                     } else {
                         window.alert('O seu sexo é masculino ou feminino?')
                         D.style.backgroundColor = 'red'
