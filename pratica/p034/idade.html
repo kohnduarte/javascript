@@ -21,6 +21,7 @@
         var radio = window.document.getElementsByName('gen')
         var botao = window.document.querySelector('input[type="button"]')
         var anoatual = new Date().getFullYear()
+        var D = window.document.getElementsByTagName('div')[0]
 
         botao.addEventListener('click', Verificar)
 
@@ -40,10 +41,23 @@
             }
         }
 
+        function sexoOk() {
+            if (radio[0].checked || radio[1].checked) {
+                return true
+            } else {
+                return false
+            }
+        }
+
         function Verificar() {
             if (!vazio(c1.value.length, 0)) {
                 if (numVal(c1.value, 1900, anoatual)) {
-                    window.alert('ok')
+                    if (sexoOk()) {                        
+                        D.style.backgroundColor = '#fff'
+                    } else {
+                        window.alert('O seu sexo é masculino ou feminino?')
+                        D.style.backgroundColor = 'red'
+                    }
                 } else {
                     window.alert('O ano deve ser entre 1900 e o ano atual')
                     c1.value =''
