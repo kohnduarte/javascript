@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <label for="c1">Ano de nascimento:</label> <input type="number" name="" id="c1" style="width: 50px;">
+    <div style="margin: 1em 0;">
+        Gênero:
+        <input type="radio" name="gen" id="r1"> <label for="r1">Masculino</label>
+        <input type="radio" name="gen" id="r2"> <label for="r2">Feminino</label>
+    </div>
+    <input type="button" value="Verificar">
+    <p class="result">Preencha os dados acima para ver o resultado!</p>
+    <div id="imagem"></div>
+
+    <script>
+        var ano = window.document.getElementById('c1')
+        c1.focus()
+        var radio = window.document.getElementsByName('gen')
+        var botao = window.document.querySelector('input[type="button"]')
+        var anoatual = new Date().getFullYear()
+        var D = window.document.getElementsByTagName('div')[0]
+        var P = window.document.getElementsByClassName('result')[0]
+        var img = window.document.createElement('img')
+        var corpo = window.document.body
+        var Dimg = window.document.querySelector('div#imagem')
+
+        botao.addEventListener('click', Verificar)
+
+        function vazio(len, inex) {
+            if (len == inex) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function numVal(year, min, max) {
+            if (year >= min && year <= max) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function sexoOk() {
+            if (radio[0].checked || radio[1].checked) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function Homem() {
+            if (radio[0].checked) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function Verificar() {
+            if (!vazio(c1.value.length, 0)) {
+                if (numVal(c1.value, 1900, anoatual)) {
+                    var idade = anoatual - c1.value
+                    if (sexoOk()) {                        
+                        D.style.backgroundColor = '#fff'
+                        
+                        Dimg.appendChild(img)
+                        if (Homem()) {
+                            P.innerHTML = `Detectamos Homem com ${idade} anos.`
+                            if (idade < 10) {                           
+                                img.src = 'h-00-09.png'
+                            } else if (idade < 20) {
+                                img.setAttribute('src', 'h-10-19.png')
+                            } else if (idade < 40) {
+                                img.src = 'h-20-40.png'
+                            } else if (idade < 65) {
+                                img.setAttribute('src', 'h-41-64.png')
+                            } else {
+                                img.src = 'h-65-xxx.png'
+                            }
+                        } else {
+                            P.innerHTML = `Detectamos Mulher com ${idade} anos.`
+                            if (idade < 10) {
+                                img.setAttribute('src', 'm-00-09.png')
+                            } else if (idade < 20) {
+                                img.src = 'm-10-19.png'
+                            } else if (idade < 40) {
+                                img.setAttribute('src', 'm-20-40.png')
+                            } else if (idade < 65) {
+                                img.src = 'm-41-64.png'
+                            } else {
+                                img.setAttribute('src', 'm-65-xxx.png')
+                            }
+                        }
+                    } else {
+                        window.alert('O seu sexo é masculino ou feminino?')
+                        D.style.backgroundColor = 'red'
+                    }
+                } else {
+                    window.alert('O ano deve ser entre 1900 e o ano atual')
+                    c1.value =''
+                    c1.focus()
+                    P.innerHTML = 'Preencha os dados acima para ver o resultado!'
+                    Dimg.innerHTML = ''
+                }
+            } else {
+                window.alert('Em que ano você nasceu?')
+                c1.focus()
+                P.innerHTML = 'Preencha os dados acima para ver o resultado!'
+                Dimg.innerHTML = ''
+            }
+
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
