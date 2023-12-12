@@ -13,7 +13,7 @@
         <input type="radio" name="gen" id="r2"> <label for="r2">Feminino</label>
     </div>
     <input type="button" value="Verificar">
-    <p>Preencha os dados acima para ver o resultado!</p>
+    <p class="result">Preencha os dados acima para ver o resultado!</p>
 
     <script>
         var ano = window.document.getElementById('c1')
@@ -22,6 +22,7 @@
         var botao = window.document.querySelector('input[type="button"]')
         var anoatual = new Date().getFullYear()
         var D = window.document.getElementsByTagName('div')[0]
+        var P = window.document.getElementsByClassName('result')[0]
 
         botao.addEventListener('click', Verificar)
 
@@ -60,10 +61,13 @@
         function Verificar() {
             if (!vazio(c1.value.length, 0)) {
                 if (numVal(c1.value, 1900, anoatual)) {
+                    var idade = anoatual - c1.value
                     if (sexoOk()) {                        
                         D.style.backgroundColor = '#fff'
                         if (Homem()) {
-                            window.alert('ok')
+                            if (idade < 10) {
+                                P.innerHTML = `Detectamos Homem com ${idade} anos.`
+                            }
                         } else {
                             window.alert('Mulher')
                         }
