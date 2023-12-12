@@ -87,7 +87,18 @@
                                 img.src = 'h-65-xxx.png'
                             }
                         } else {
-                            window.alert('Mulher')
+                            P.innerHTML = `Detectamos Mulher com ${idade} anos.`
+                            if (idade < 10) {
+                                img.setAttribute('src', 'm-00-09.png')
+                            } else if (idade < 20) {
+                                img.src = 'm-10-19.png'
+                            } else if (idade < 40) {
+                                img.setAttribute('src', 'm-20-40.png')
+                            } else if (idade < 65) {
+                                img.src = 'm-41-64.png'
+                            } else {
+                                img.setAttribute('src', 'm-65-xxx.png')
+                            }
                         }
                     } else {
                         window.alert('O seu sexo é masculino ou feminino?')
