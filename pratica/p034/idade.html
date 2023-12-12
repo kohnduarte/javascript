@@ -78,7 +78,13 @@
                             if (idade < 10) {                           
                                 img.src = 'h-00-09.png'
                             } else if (idade < 20) {
-
+                                img.setAttribute('src', 'h-10-19.png')
+                            } else if (idade < 40) {
+                                img.src = 'h-20-40.png'
+                            } else if (idade < 65) {
+                                img.setAttribute('src', 'h-41-64.png')
+                            } else {
+                                img.src = 'h-65-xxx.png'
                             }
                         } else {
                             window.alert('Mulher')
