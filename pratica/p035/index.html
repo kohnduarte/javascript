@@ -18,13 +18,17 @@
     </section>
 
     <script>
-        var now = new Date()
-        var h = now.getHours()
-        var m = now.getMinutes()
-        var s = now.getSeconds()
-        var P = window.document.getElementById('hora')
+        function horaAgora() {
+            var now = new Date()
+            var h = now.getHours().toString().padStart(2, '0')
+            var m = String(now.getMinutes()).padStart(2, '0')
+            var s = now.getSeconds().toString().padStart(2, '0')
+            var P = window.document.getElementById('hora')
+            P.innerText = ` ${h}:${m}:${s}`
+        }
 
-        P.innerText += ` ${h}:${m}:${s}`
+        setInterval(horaAgora, 1000)
+        
     </script>
     
 </body>
