@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora</title>
+    <link rel="shortcut icon" href="../js.ico" type="image/x-icon">
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora Agora</h1>
+    <section>
+        <p id="hora">Agora são</p>
+    </section>
+
+    <script>
+        var now = new Date()
+        var h = now.getHours()
+        var m = now.getMinutes()
+        var s = now.getSeconds()
+        var P = window.document.getElementById('hora')
+
+        P.innerText += ` ${h}:${m}:${s}`
+    </script>
+    
+</body>
+</html>
