@@ -45,7 +45,7 @@
 
         function dataEhora() {
             var P = window.document.getElementsByClassName('data-e-hora')[0]
-            P.innerText = new Date().toLocaleTimeString()
+            P.innerText = new Date().toLocaleString()
         }
 
         setInterval(dataEhora, 1000)
