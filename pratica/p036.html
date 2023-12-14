@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hora"></h1>
+    <p class="data-e-hora"></p>
+    <input type="button" value="Parar relógio" onclick="stopClock()">
+    <input type="button" value="Parar cor" onclick="pararCor()">
+
+    <script>
+        function horaAgora() {
+            var h = new Date().getHours().toString().padStart(2, '0')
+            var m = String(new Date().getMinutes()).padStart(2, '0')
+            var s = new Date().getSeconds().toString().padStart(2, '0')
+            var título = window.document.getElementById('hora')
+            título.innerText = `${h}:${m}:${s}`
+        }
+
+        var horatit = setInterval(horaAgora, 1000)
+
+        function dataEhora() {
+            var P = window.document.getElementsByClassName('data-e-hora')[0]
+            P.innerText = new Date().toLocaleTimeString()
+        }
+
+        setInterval(dataEhora, 1000)
+
+        function stopClock() {
+            clearInterval(horatit)
+        }
+
+        function setColor() {
+            window.document.body.style.backgroundColor = window.document.body.style.backgroundColor == 'yellow' ? 'pink' : 'yellow'
+        }
+
+        var cores = setInterval(setColor, 1000)
+
+        function pararCor() {
+            clearInterval(cores)
+        }
+
+        
+
+        
+
+
+    </script>
+    
+</body>
+</html>
