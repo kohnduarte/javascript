@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #d1 {
+            height: 30px;
+            margin: 1em 0;
+            background-color: #ddd;
+        }
+
+        #bar {
+            height: 100%;
+            width: 10px;
+            background-color: #4CAF50;
+        }
+    </style>
 </head>
 <body>
     <h1 id="hora"></h1>
     <p class="data-e-hora"></p>
     <input type="button" value="Parar relógio" onclick="stopClock()">
     <input type="button" value="Parar cor" onclick="pararCor()">
+
+    <div id="d1">
+        <div id="bar">
+
+        </div>
+    </div>
+
+    <input type="button" value="Preencher" onclick="barraProg()">
 
     <script>
         function horaAgora() {
@@ -42,6 +63,24 @@
         function pararCor() {
             clearInterval(cores)
         }
+
+        function barraProg() {
+            var barra = window.document.querySelector('div#bar')
+            var width = 0
+            var id = setInterval(prog, 10)
+            function prog() {
+                if (width != 100) {
+                    width++
+                    barra.style.width = width + '%'
+                } else {
+                    clearInterval(id)
+                }
+            }
+            
+            
+        }
+
+        
 
         
 
