@@ -1,6 +1,6 @@
-var hora = new Date().getHours()
-var min = new Date().getMinutes()
-var segs = new Date().getSeconds()
+var hora = new Date().getHours().toString().padStart(2, '0')
+var min = String(new Date().getMinutes()).padStart(2, '0')
+var segs = new Date().getSeconds().toString().padStart(2, '0')
 
 var B = window.document.body
 var P = window.document.getElementById('parh')
