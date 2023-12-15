@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#d1 {
+            height: 30px;
+            background-color: rgba(109, 110, 110, 0.466);
+            margin-bottom: 1em;
+        }
+
+        div#d2 {
+            height: 100%;
+            width: 30px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div id="d2"></div>
+    </div>
+
+    <input type="button" value="Encher">
+    <button onclick="stop()">Parar de piscar</button>
+
+    <script>
+        var botao = window.document.querySelector('input[type="button"]')
+
+        botao.addEventListener('click', encher)
+
+        function encher(){
+            var barra = window.document.getElementById('d2')
+            var width = 0
+            var id = setInterval(cresceBarra, 50)
+            function cresceBarra() {
+                if (width == 100) {
+                    clearInterval(id)
+                } else {
+                    width++
+                    barra.style.width = width + '%'
+                }
+            }
+
+        }
+
+        function corFundo() {
+        var B = window.document.body
+        B.style.backgroundColor = B.style.backgroundColor == 'pink' ? 'white' : 'pink'
+        }
+
+        var color = setInterval(corFundo, 1000)
+
+        function stop() {
+            clearInterval(color)
+        }
+
+    </script>
+    
+</body>
+</html>
