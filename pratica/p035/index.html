@@ -11,23 +11,39 @@
         }
     </style>
 </head>
-<body>
+<body onload="fotoMomento()">
     <h1>Hora Agora</h1>
-    <section>
-        <p id="hora">Agora são</p>
+    <section name="sec">
+        <p></p>
     </section>
 
     <script>
         function horaAgora() {
-            var now = new Date()
-            var h = now.getHours().toString().padStart(2, '0')
-            var m = String(now.getMinutes()).padStart(2, '0')
-            var s = now.getSeconds().toString().padStart(2, '0')
-            var P = window.document.getElementById('hora')
-            P.innerText = ` ${h}:${m}:${s}`
+            var P = window.document.getElementsByTagName('p')[0]
+            var time = new Date().toLocaleTimeString()
+            P.innerText = time
         }
 
         setInterval(horaAgora, 1000)
+
+        function fotoMomento() {
+            let S = window.document.getElementsByName('sec')[0]
+            let img = window.document.createElement('img')
+            img.alt = 'imagem que corresponde ao período do dia, isto é, manhã, tarde ou noite'
+            let h = new Date().getHours()
+            if (h < 6) {
+                img.src = 'noite.png'
+            } else if (h < 12) {
+                img.setAttribute('src', 'manha.png')
+            } else if (h < 17) {
+                img.src = 'tarde.png'
+            } else if (h < 19) {
+                img.setAttribute('src', 'sunset.png')
+            } else {
+                img.src = 'noite.png'
+            }
+            S.appendChild(img)
+        }
         
     </script>
     
