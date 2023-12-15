@@ -30,6 +30,7 @@
             let S = window.document.getElementsByName('sec')[0]
             let img = window.document.createElement('img')
             img.alt = 'imagem que corresponde ao período do dia, isto é, manhã, tarde ou noite'
+            
             setInterval(verifHora, 1000)
             function verifHora() {
                 let h = new Date().getHours()
@@ -44,8 +45,9 @@
             } else {
                 img.src = 'noite.png'
             }
-            S.appendChild(img)
+            
             }
+            S.appendChild(img)
         }
         
     </script>
