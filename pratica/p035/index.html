@@ -18,13 +18,34 @@
     </section>
 
     <script>
+        var img = window.document.createElement('img')
+        img.alt = 'imagem referente a um dos três períodos do dia: manhã, tarde ou noite'
+        var S = window.document.getElementsByName('sec')[0]
+
         function horaEfoto() {
             var time = new Date().toLocaleTimeString()
             var P = window.document.getElementsByTagName('p')[0]
             P.innerHTML = time
-
             
+            var h = new Date().getHours()
+            if (h < 6) {
+                img.src = 'noite.png'
+            } else if (h < 12) {
+                img.setAttribute('src', 'manha.png')
+            } else if (h < 17) {
+                img.src = 'tarde.png'
+            } else if (h < 19) {
+                img.setAttribute('src', 'sunset.png')
+            } else {
+                img.src = 'noite.png'
+            }
         }
+
+        S.appendChild(img)
+
+        setInterval(horaEfoto, 1000)
+
+        
         
         
     </script>
