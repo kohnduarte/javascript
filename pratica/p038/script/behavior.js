@@ -16,7 +16,7 @@ function dieta() {
         if (part[0].checked || part[1].checked || part[2].checked || part[3].checked || part[4].checked) {
             if (cnum.value.length > 0) {
                 if (cnum.value > 0 && cnum.value <= 20) {
-                    window.alert('ok')
+                    var x = Number.parseFloat(cnum.value)
                 } else {
                     window.alert('O máximo é 20kg!')
                     cnum.value = ''
