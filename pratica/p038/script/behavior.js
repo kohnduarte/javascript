@@ -8,10 +8,15 @@ function dieta() {
     var cnum = window.document.getElementById('n')
 
     if (radio[0].checked || radio[1].checked) {
+        if (radio[0].checked) {
+            var action = 'engordar'
+        } else {
+            var action = 'emagrecer'
+        }
         if (part[0].checked || part[1].checked || part[2].checked || part[3].checked || part[4].checked) {
             window.alert('ok')
         } else {
-            window.alert('erro')
+            window.alert(`Quem você quer ${action}?`)
         }
     } else {
         window.alert('Escolha se você quer engordar ou emagrecer os participantes.')
