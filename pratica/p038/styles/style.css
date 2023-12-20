@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+caption {
+    margin-bottom: 1em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+td {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px;
+}
+
+div {
+    margin-bottom: 1em;
+}
+
+#n {
+    width: 50px;
+}
