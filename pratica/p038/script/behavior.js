@@ -23,7 +23,7 @@ function dieta() {
                     cnum.focus()
                 }
             } else {
-                window.alert(`${action} quantos kg?`)
+                window.alert(`${action.charAt(0).toUpperCase() + action.slice(1)} quantos kg?`)
                 cnum.focus()
             }
         } else {
