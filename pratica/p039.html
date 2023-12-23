@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Que horas são?</button>
+    
+    <script>
+        var botao = window.document.getElementsByTagName('button')[0]
+        botao.addEventListener('click', horaAgora)
+        var P = window.document.createElement('p')
+        P.setAttribute('id', 'hora-atual')
+
+        function horaAgora() {            
+            P.innerHTML = `<strong>${new Date().toLocaleString()}</strong>`
+            window.document.body.appendChild(P)
+            setInterval(horaAgora, 1000)
+        }
+
+            
+        
+
+
+
+
+    </script>
+</body>
+</html>
