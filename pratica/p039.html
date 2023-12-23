@@ -17,7 +17,7 @@
         function horaAgora() {            
             P.innerHTML = `<strong>${new Date().toLocaleString()}</strong>`
             window.document.body.appendChild(P)
-            setInterval(horaAgora, 1000)
+            var id = setInterval(horaAgora, 1000)
         }
 
             
