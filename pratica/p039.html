@@ -15,6 +15,7 @@
         P.setAttribute('id', 'hora-atual')
         var botao2 = window.document.createElement('button')
         botao2.innerText = 'Parar relógio'
+        botao2.addEventListener('click', Stop)
 
         function horaAgora() {            
             P.innerHTML = `<strong>${new Date().toLocaleString()}</strong>`
