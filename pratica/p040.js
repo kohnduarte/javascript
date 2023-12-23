@@ -3,17 +3,29 @@ var ob1 = {
     gen: 'homem',
     idade: 32,
     peso: 57,
-    rejuvenescer(anos = 0) {
-        this.idade -= anos
+    age(anos = 0) {
+        if (anos > 0) {
+            this.idade += anos
+            console.log('Envelheceu ' + anos + ' anos! Agora tem ' + this.idade + ' anos.')
+        } else if (anos < 0) {
+            this.idade += anos 
+            console.log(`Rejuvenesceu ${-anos} anos! Agora tem ${this.idade} anos.`)
+        }
     },
-    ganharPeso(quilos = 0) {
-        this.peso += quilos
+    pesando(quilos) {
+        if (quilos > 0) {
+            this.peso += quilos
+            console.log(`Engordou ${quilos} kg! Agora está pesando ${this.peso}kg.`)
+        } else if (quilos < 0) {
+            this.peso += quilos
+            console.log(`Emagreceu ${-quilos} kg! Agora está pesando ${this.peso}kg.`)
+        }
     }
+    
 }
 
-ob1.rejuvenescer(3)
-ob1.ganharPeso(10)
+ob1.age(-3)
+ob1.pesando(10)
 
-console.log(`${ob1.nome} é ${ob1.gen}, tem ${ob1.idade} anos e pesa ${ob1.peso}kg.`)
 
 
